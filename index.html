@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean Felipe | Portfólio Profissional</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f6f9;
+color:#2c3e50;
+line-height:1.6;
+}
+
+header{
+background:linear-gradient(135deg,#0a3d62,#1e90ff);
+padding:20px 50px;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+nav h2{
+color:white;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.7;
+}
+
+section{
+min-height:100vh;
+padding:120px 20px 60px 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.container{
+max-width:1100px;
+width:100%;
+}
+
+#inicio{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1518770660439-4636190af475');
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+}
+
+#inicio h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+#inicio p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+margin-bottom:30px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+form input, form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+button{
+background:#0a3d62;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#1e90ff;
+}
+
+footer{
+background:#0a3d62;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+#inicio h1{
+font-size:32px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h2>Jean Felipe</h2>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#novidades">Novidades</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="inicio">
+<div class="container">
+<h1>Desenvolvedor & Estudante de Ciência da Computação</h1>
+<p>Construindo soluções tecnológicas, automações inteligentes e sistemas eficientes com foco em crescimento profissional e inovação.</p>
+</div>
+</section>
+
+<section id="sobre">
+<div class="container">
+<div class="card">
+<h2>Sobre Mim</h2>
+<p>Estudante de Ciências da Computação (8º período), com previsão de conclusão em 2027. Experiência com Python, Node.js, MySQL, Power BI e automação de processos.</p>
+<p>Atualmente atuando como gestor empresarial (MEI), desenvolvendo habilidades em organização, negociação e suporte tecnológico.</p>
+</div>
+</div>
+</section>
+
+<section id="projetos">
+<div class="container">
+<h2 style="margin-bottom:30px;">Projetos</h2>
+<div class="grid">
+
+<div class="card">
+<h3>Sensor de Fumaça com Arduino</h3>
+<p>Sistema de prevenção a incêndio com detecção automática e alerta utilizando Arduino.</p>
+</div>
+
+<div class="card">
+<h3>Aplicações Web</h3>
+<p>Desenvolvimento de sistemas utilizando Node.js e MySQL com versionamento via Git.</p>
+</div>
+
+<div class="card">
+<h3>Automações</h3>
+<p>Criação de scripts e estruturação de prompts técnicos para otimização de tarefas com apoio de IA.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="novidades">
+<div class="container">
+<div class="card">
+<h2>Novidades</h2>
+<p>Planejamento de pesquisa aplicada à Inteligência Artificial no contexto esportivo (TCC).</p>
+<p>Aprimoramento contínuo em desenvolvimento, dados e automação.</p>
+</div>
+</div>
+</section>
+
+<section id="contato">
+<div class="container">
+<div class="card">
+<h2>Contato</h2>
+
+<form>
+<input type="text" placeholder="Seu nome">
+<input type="email" placeholder="Seu email">
+<textarea rows="5" placeholder="Sua mensagem"></textarea>
+<button type="submit">Enviar</button>
+</form>
+
+<p style="margin-top:20px;">GitHub: github.com/jeanfelipe</p>
+<p>Telefone: (21) 97026-3143</p>
+
+</div>
+</div>
+</section>
+
+<footer>
+© 2026 - Portfólio Profissional
+</footer>
+
+</body>
+</html>
