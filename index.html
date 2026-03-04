@@ -1,227 +1,278 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jean Felipe | Portfólio Profissional</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jean Felipe | Portfólio Profissional</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
-      font-family:'Poppins',sans-serif;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
 
-    body{
-      background:#0f172a;
-      color:#ffffff;
-      line-height:1.6;
-    }
+body{
+background:#0f172a;
+color:#ffffff;
+line-height:1.6;
+}
 
-    header{
-      background:#0f172a;
-      padding:20px 50px;
-      position:fixed;
-      width:100%;
-      top:0;
-      border-bottom:1px solid #1e293b;
-    }
+header{
+background:#0f172a;
+padding:20px 50px;
+position:fixed;
+width:100%;
+top:0;
+border-bottom:1px solid #1e293b;
+z-index:1000;
+}
 
-    nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-    }
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    nav ul{
-      list-style:none;
-      display:flex;
-      gap:25px;
-    }
+nav ul{
+list-style:none;
+display:flex;
+gap:25px;
+}
 
-    nav a{
-      text-decoration:none;
-      color:white;
-      font-weight:500;
-      transition:0.3s;
-    }
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
 
-    nav a:hover{
-      color:#38bdf8;
-    }
+nav a:hover{
+color:#38bdf8;
+}
 
-    section{
-      padding:120px 20px 80px 20px;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+section{
+padding:120px 20px 80px 20px;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
 
-    .container{
-      max-width:1000px;
-      width:100%;
-    }
+.container{
+max-width:1000px;
+width:100%;
+}
 
-    #inicio{
-      text-align:center;
-    }
+#inicio{
+text-align:center;
+}
 
-    #inicio h1{
-      font-size:48px;
-      margin-bottom:20px;
-    }
+#inicio h1{
+font-size:48px;
+margin-bottom:20px;
+}
 
-    #inicio p{
-      font-size:20px;
-      opacity:0.8;
-      max-width:700px;
-      margin:auto;
-    }
+#inicio p{
+font-size:20px;
+opacity:0.8;
+max-width:700px;
+margin:auto;
+}
 
-    .card{
-      background:#1e293b;
-      padding:30px;
-      border-radius:12px;
-      margin-bottom:25px;
-      transition:0.3s;
-    }
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+margin-bottom:25px;
+transition:0.3s;
+}
 
-    .card:hover{
-      transform:translateY(-5px);
-    }
+.card:hover{
+transform:translateY(-5px);
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:20px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
 
-    form input, form textarea{
-      width:100%;
-      padding:12px;
-      margin-bottom:15px;
-      border-radius:8px;
-      border:none;
-      outline:none;
-    }
+form input, form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:8px;
+border:none;
+outline:none;
+}
 
-    button{
-      background:#38bdf8;
-      color:#0f172a;
-      padding:12px 25px;
-      border:none;
-      border-radius:8px;
-      font-weight:600;
-      cursor:pointer;
-      transition:0.3s;
-    }
+button{
+background:#38bdf8;
+color:#0f172a;
+padding:12px 25px;
+border:none;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
 
-    button:hover{
-      opacity:0.8;
-    }
+button:hover{
+opacity:0.8;
+}
 
-    footer{
-      text-align:center;
-      padding:30px;
-      background:#0f172a;
-      border-top:1px solid #1e293b;
-      opacity:0.7;
-    }
+.links a{
+display:inline-block;
+margin-right:15px;
+margin-top:10px;
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
+}
 
-    @media(max-width:768px){
-      nav{
-        flex-direction:column;
-        gap:15px;
-      }
+footer{
+text-align:center;
+padding:30px;
+background:#0f172a;
+border-top:1px solid #1e293b;
+opacity:0.7;
+}
 
-      #inicio h1{
-        font-size:32px;
-      }
-    }
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:15px;
+}
 
-  </style>
+#inicio h1{
+font-size:32px;
+}
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <h2>Jean Felipe</h2>
-    <ul>
-      <li><a href="#inicio">Início</a></li>
-      <li><a href="#sobre">Sobre</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
-  </nav>
+<nav>
+<h2>Jean Felipe</h2>
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#sobre">Sobre</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#tcc">Pesquisa</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
 </header>
 
 <section id="inicio">
-  <div class="container">
-    <h1>Desenvolvedor em Formação</h1>
-    <p>Estudante de Ciência da Computação focado em desenvolvimento, automação e construção de soluções tecnológicas eficientes.</p>
-  </div>
+<div class="container">
+<h1>Desenvolvedor em Formação</h1>
+<p>Estudante de Ciência da Computação focado em desenvolvimento, automação e construção de soluções inteligentes orientadas a dados.</p>
+</div>
 </section>
 
 <section id="sobre">
-  <div class="container">
-    <div class="card">
-      <h2>Sobre Mim</h2>
-      <p>Bacharelado em Ciência da Computação (conclusão prevista para 2027).</p>
-      <p>Experiência com Python, Node.js, MySQL, Power BI, Excel e automação de processos.</p>
-      <p>Atuação como gestor MEI, realizando negociações, organização de pedidos e suporte tecnológico.</p>
-    </div>
-  </div>
+<div class="container">
+<div class="card">
+<h2>Sobre Mim</h2>
+
+<p>Graduando em Bacharelado em Ciência da Computação (conclusão prevista para 2027).</p>
+
+<p>Possuo experiência prática com Python, Node.js, MySQL, Power BI, Excel avançado e automação de processos através de scripts e inteligência artificial.</p>
+
+<p>Atuo como gestor MEI, realizando negociações com fornecedores, organização de pedidos via sistema Bling, controle operacional e suporte tecnológico estratégico.</p>
+
+<p>Utilizo inteligência artificial diariamente para otimizar fluxos de trabalho, estruturar prompts técnicos e acelerar desenvolvimento de soluções.</p>
+
+<p>Perfil analítico, autodidata e orientado a resultados, com forte interesse em tecnologia aplicada à performance e dados.</p>
+
+<h3 style="margin-top:20px;">Formações Complementares</h3>
+<ul style="margin-top:10px; line-height:1.8;">
+<li>Curso de Desenvolvimento Web Moderno</li>
+<li>Fundamentos de Python para Análise de Dados</li>
+<li>Power BI para Business Intelligence</li>
+<li>Excel Avançado aplicado à Gestão</li>
+<li>Git e GitHub para Versionamento Profissional</li>
+<li>Lógica de Programação e Estrutura de Dados</li>
+<li>Inglês Fluente</li>
+</ul>
+
+</div>
+</div>
 </section>
 
 <section id="projetos">
-  <div class="container">
-    <h2 style="margin-bottom:30px;">Projetos</h2>
-    <div class="grid">
+<div class="container">
+<h2 style="margin-bottom:30px;">Projetos</h2>
 
-      <div class="card">
-        <h3>Sensor de Fumaça com Arduino</h3>
-        <p>Sistema de prevenção a incêndio com alerta automático.</p>
-      </div>
+<div class="grid">
 
-      <div class="card">
-        <h3>Aplicações Web</h3>
-        <p>Desenvolvimento com Node.js e MySQL utilizando Git para versionamento.</p>
-      </div>
+<div class="card">
+<h3>Sensor de Fumaça com Arduino</h3>
+<p>Sistema embarcado para prevenção de incêndios com monitoramento de gases e alerta automático.</p>
+</div>
 
-      <div class="card">
-        <h3>Automações com Scripts</h3>
-        <p>Criação de scripts e prompts estruturados para otimização de tarefas.</p>
-      </div>
+<div class="card">
+<h3>Aplicações Web Full Stack</h3>
+<p>Desenvolvimento com Node.js e MySQL, versionamento com Git e estruturação de APIs.</p>
+</div>
 
-    </div>
-  </div>
+<div class="card">
+<h3>Automações com IA e Scripts</h3>
+<p>Criação de scripts para redução de tarefas repetitivas e construção de prompts estruturados para geração de código e análises.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="tcc">
+<div class="container">
+<div class="card">
+<h2>Pesquisa Acadêmica (TCC)</h2>
+
+<p>Projeto de pesquisa em desenvolvimento na área de Inteligência Artificial aplicada ao esporte.</p>
+
+<p>O objetivo é estudar como modelos de análise de dados podem auxiliar na melhoria de performance esportiva, prevenção de lesões e tomada de decisão baseada em métricas.</p>
+
+<p>O trabalho envolve coleta de dados, modelagem, análise estatística e aplicação prática em contextos esportivos.</p>
+
+</div>
+</div>
 </section>
 
 <section id="contato">
-  <div class="container">
-    <div class="card">
-      <h2>Contato</h2>
+<div class="container">
+<div class="card">
+<h2>Contato</h2>
 
-      <form action="https://formspree.io/f/maqdraek" method="POST">
-        <input type="text" name="name" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
+<form action="https://formspree.io/f/maqdraek" method="POST">
+<input type="text" name="name" placeholder="Seu nome" required>
+<input type="email" name="email" placeholder="Seu email" required>
+<textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+<button type="submit">Enviar</button>
+</form>
 
-      <p style="margin-top:20px;">GitHub: github.com/Jeanzinr17</p>
-    </div>
-  </div>
+<div class="links">
+<a href="https://www.instagram.com/jean_deligt?igsh=MXhyNmV3MjU2aGsydA==" target="_blank">Instagram</a>
+<a href="https://www.linkedin.com/in/jean-felipe-7501b2212/" target="_blank">LinkedIn</a>
+<a href="https://github.com/Jeanzinr17" target="_blank">GitHub</a>
+</div>
+
+</div>
+</div>
 </section>
 
 <footer>
-  © 2026 - Jean Felipe
+© 2026 - Jean Felipe | Portfólio Profissional
 </footer>
 
 </body>
