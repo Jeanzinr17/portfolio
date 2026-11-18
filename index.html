@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jean Felipe · Ciência da Computação · Portfólio</title>
+  <meta name="description" content="Portfólio de Jean Felipe Souza Coelho, estudante de Ciência da Computação (UVA) com formação técnica em Informática, experiência em suporte de TI e sistemas empresariais, e projetos de programação, IA aplicada e web.">
   <meta name="description" content="Portfólio profissional de Jean Felipe Souza Coelho — Estudante de Ciência da Computação, desenvolvedor e candidato a estágio em TI." />
 
   <!-- Google Fonts: Syne (display) + JetBrains Mono (accent) + Figtree (body) -->
@@ -27,7 +28,7 @@
       --violet: #7c3aed;
       --pink:   #e040fb;
       --white:  #f0f0fa;
-      --muted:  #6b6b85;
+      --muted:  #9a9ab2;
       --subtle: rgba(255,255,255,0.04);
 
       --font-display: 'Syne', sans-serif;
@@ -1294,10 +1295,35 @@
       .hero-actions .btn { justify-content: center; }
       .certs-grid { grid-template-columns: 1fr; }
     }
+  
+    /* ============================================================
+       AJUSTES FINAIS (acessibilidade, grupos de tecnologia, cursos)
+    ============================================================ */
+    .skip-link { position: absolute; left: -9999px; top: 0; z-index: 2000; background: var(--cyan); color: #001018; padding: 0.7rem 1.1rem; border-radius: 0 0 var(--radius-sm) 0; font-weight: 700; }
+    .skip-link:focus { left: 0; }
+    :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+    .tech-group { margin-bottom: 2.25rem; }
+    .tech-group:last-child { margin-bottom: 0; }
+    .tech-group-title { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; }
+    .tech-group-note { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+    .project-nolink { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); }
+    .cv-skill-list { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .extra-courses { margin-top: 2.5rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .extra-courses h3 { font-family: var(--font-mono); font-size: 0.95rem; margin-bottom: 0.25rem; }
+    .extra-courses > p { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+    .extra-courses ul { list-style: none; display: grid; gap: 0.6rem; }
+    .extra-courses li { font-size: 0.9rem; padding: 0.55rem 0; border-bottom: 1px solid var(--border); }
+    .extra-courses li span { color: var(--muted); }
+    .form-note { color: var(--muted); font-size: 0.82rem; margin-top: 0.75rem; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#sobre">Pular para o conteúdo</a>
 
   <!-- ============================================================
        NAVIGATION
@@ -1316,10 +1342,10 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
       <div class="nav-cta">
-        <a href="https://github.com/Jeanzinr17" target="_blank" class="btn btn-ghost" style="padding:0.55rem 1rem;font-size:0.82rem;">GitHub</a>
+        <a href="https://github.com/Jeanzinr17" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding:0.55rem 1rem;font-size:0.82rem;">GitHub</a>
         <a href="#contato" class="btn btn-primary" style="padding:0.55rem 1.2rem;font-size:0.82rem;">Contato</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -1351,17 +1377,17 @@
         <div class="hero-text">
           <div class="hero-badge">
             <span class="hero-badge-dot"></span>
-            Disponível para estágio em TI
+            Aberto a estágio e vaga júnior em TI
           </div>
           <h1 class="hero-name">
             Jean<br /><span class="highlight">Felipe.</span>
           </h1>
-          <p class="hero-role">Estudante de Ciência da Computação · Desenvolvedor</p>
+          <p class="hero-role">Estudante de Ciência da Computação · Suporte, sistemas e IA aplicada</p>
           <p class="hero-desc">
-            Construindo soluções tecnológicas com lógica, criatividade e visão estratégica. 
-            Em formação pela Veiga de Almeida, com experiência prática em projetos de impacto 
-            real — desde tecnologia aplicada à saúde até automação e sistemas web.
-          </p>
+              Estudo Ciência da Computação na Veiga de Almeida e tenho formação técnica em Informática.
+              Trabalho com sistemas empresariais e suporte de TI e desenvolvo projetos de programação,
+              IA aplicada e web.
+            </p>
           <div class="hero-actions">
             <a href="#projetos" class="btn btn-primary">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
@@ -1371,7 +1397,7 @@
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               Currículo Online
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5521970263143&text=Olá%20Jean!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" class="btn btn-ghost">
+            <a href="https://api.whatsapp.com/send?phone=5521970263143&amp;text=Olá%20Jean!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
               WhatsApp
             </a>
@@ -1382,16 +1408,16 @@
               <div class="hero-stat-label">Período — BCC</div>
             </div>
             <div>
-              <div class="hero-stat-val">+2</div>
-              <div class="hero-stat-label">Anos de atuação</div>
+              <div class="hero-stat-val">2+</div>
+              <div class="hero-stat-label">Anos de atuação profissional</div>
             </div>
             <div>
-              <div class="hero-stat-val">6+</div>
-              <div class="hero-stat-label">Projetos entregues</div>
+              <div class="hero-stat-val">7</div>
+              <div class="hero-stat-label">Projetos acadêmicos e pessoais</div>
             </div>
             <div>
-              <div class="hero-stat-val">9+</div>
-              <div class="hero-stat-label">Certificações</div>
+              <div class="hero-stat-val">5</div>
+              <div class="hero-stat-label">Cursos FGV com declaração em PDF</div>
             </div>
           </div>
         </div>
@@ -1400,7 +1426,7 @@
         <div class="hero-photo-wrap">
           <div class="hero-photo-frame">
             <img
-              src="https://jeanzinr17.github.io/portfolio/assets/img/jean-hero.png"
+              src="assets/img/jean-hero.png"
               alt="Jean Felipe Souza Coelho"
               onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, rgba(0,210,255,0.15), rgba(124,58,237,0.15))'; this.parentElement.innerHTML += '<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:6rem;\'>👨‍💻</div>'"
             />
@@ -1409,7 +1435,7 @@
             <span class="float-dot" style="background:#4ade80;"></span>Python · Arduino
           </div>
           <div class="hero-float hero-float-2">
-            <span class="float-dot" style="background:#00d2ff;"></span>Web Dev · ML
+            <span class="float-dot" style="background:#00d2ff;"></span>Web · IA aplicada
           </div>
         </div>
       </div>
@@ -1429,23 +1455,21 @@
         <div class="about-text reveal">
           <p>
             Sou <strong>Jean Felipe Souza Coelho</strong>, estudante de Ciência da Computação 
-            na Universidade Veiga de Almeida no Rio de Janeiro. Estou no 8° período e busco 
-            ativa e estrategicamente uma oportunidade de estágio em tecnologia.
+            na Universidade Veiga de Almeida no Rio de Janeiro. Estou no 8º período e busco estágio ou vaga júnior em tecnologia.
           </p>
           <p>
-            Desde 2024, atuo profissionalmente como Assistente de Operações Comerciais em empresa 
-            própria, onde desenvolvi visão de negócio, domínio de ferramentas como Excel, 
-            Power BI e sistemas ERP, e capacidade de trabalhar com dados reais e tomada de decisão.
+            Desde outubro de 2024, atuo profissionalmente como Assistente de Operações Comerciais em empresa 
+            própria, onde acompanho pedidos entre clientes, fornecedores e faturamento nos sistemas Guarani AFV e Bling, mantenho controles em Excel e organizo a prospecção digital com apoio de ferramentas de IA.
           </p>
           <p>
-            Minha trajetória combina <strong>base técnica sólida</strong>, 
-            <strong>experiência prática multidisciplinar</strong> e constante aprendizado. 
-            Participei do Projeto Mattics — tecnologia aplicada ao tratamento de Parkinson — 
-            e desenvolvi sistemas embarcados, dashboards e soluções web ao longo da graduação.
+            Minha trajetória combina suporte técnico, sistemas empresariais e projetos de programação.
+            Participei do Projeto Mattics, de tecnologia aplicada ao contexto do tratamento de Parkinson,
+            montei protótipos com Arduino e desenvolvi páginas web em projetos acadêmicos. Hoje também
+            desenvolvo o JARVIS, um assistente pessoal com IA local, com apoio de ferramentas de IA.
           </p>
           <p>
-            Busco um ambiente onde possa crescer, aprender com profissionais experientes e 
-            contribuir desde o primeiro dia com dedicação e visão técnica.
+            Busco um ambiente onde possa aprender com profissionais experientes e contribuir com
+            organização, comunicação clara e disposição para resolver problemas.
           </p>
 
           <div class="about-highlights">
@@ -1453,21 +1477,21 @@
               <div class="highlight-icon">🎯</div>
               <div>
                 <div class="highlight-label">Objetivo claro</div>
-                <div class="highlight-desc">Estágio em desenvolvimento, dados ou infra de TI</div>
+                <div class="highlight-desc">Estágio ou vaga júnior em suporte, sistemas, dados ou desenvolvimento</div>
               </div>
             </div>
             <div class="highlight-item reveal reveal-delay-2">
               <div class="highlight-icon">⚡</div>
               <div>
-                <div class="highlight-label">Aprendizado rápido</div>
-                <div class="highlight-desc">Me adapto a tecnologias e contextos novos com agilidade</div>
+                <div class="highlight-label">Aprendizado contínuo</div>
+                <div class="highlight-desc">Cursos da FGV, projetos pessoais e leitura de documentação técnica em inglês</div>
               </div>
             </div>
             <div class="highlight-item reveal reveal-delay-3">
               <div class="highlight-icon">🛠</div>
               <div>
-                <div class="highlight-label">Experiência real</div>
-                <div class="highlight-desc">Projeto em saúde, operações comerciais e desenvolvimento web</div>
+                <div class="highlight-label">Experiência profissional</div>
+                <div class="highlight-desc">Estágio de TI e operações comerciais com sistemas empresariais</div>
               </div>
             </div>
           </div>
@@ -1489,7 +1513,7 @@
               <li>Desenvolvimento Web (Front-end & Back-end)</li>
               <li>Análise e Ciência de Dados</li>
               <li>Inteligência Artificial &amp; Machine Learning</li>
-              <li>Sistemas Embarcados &amp; IoT</li>
+              <li>Sistemas Embarcados</li>
               <li>Infraestrutura e Suporte em TI</li>
               <li>Transformação Digital e Inovação</li>
             </ul>
@@ -1500,7 +1524,7 @@
               <li>Rio de Janeiro — RJ, Vila Valqueire</li>
               <li>jeanfelipe711@gmail.com</li>
               <li>(21) 97026-3143</li>
-              <li>Inglês: Intermediário / Avançado</li>
+              <li>Inglês: Avançado</li>
             </ul>
           </div>
         </div>
@@ -1516,69 +1540,54 @@
       <div class="section-header reveal">
         <p class="label">// stack técnico</p>
         <h2 class="section-title">Tecnologias &amp; Ferramentas</h2>
-        <p class="section-sub">Ferramentas e linguagens com as quais venho desenvolvendo projetos e fortalecendo minha base técnica.</p>
+        <p class="section-sub">Tecnologias organizadas pelo tipo de experiência que tenho com cada uma.</p>
       </div>
-      <div class="tech-grid">
-        <!-- Each: icon, name, level (0-1) -->
-        <div class="tech-card reveal">
-          <span class="tech-icon">🐍</span>
-          <div class="tech-name">Python</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.75"></div></div>
+      <div class="tech-group">
+        <h3 class="tech-group-title">Experiência prática</h3>
+        <p class="tech-group-note">Usadas no trabalho e no estágio de TI.</p>
+        <div class="tech-grid">
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🪟</span><div class="tech-name">Windows e suporte de TI</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🛠️</span><div class="tech-name">Hardware e manutenção</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">📈</span><div class="tech-name">Excel</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🧾</span><div class="tech-name">Guarani AFV</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🧮</span><div class="tech-name">Bling</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">✨</span><div class="tech-name">Ferramentas de IA</div></div>
         </div>
-        <div class="tech-card reveal reveal-delay-1">
-          <span class="tech-icon">🌐</span>
-          <div class="tech-name">HTML5</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.8"></div></div>
+      </div>
+      <div class="tech-group">
+        <h3 class="tech-group-title">Aplicado em projetos</h3>
+        <p class="tech-group-note">Usadas em projetos acadêmicos e pessoais.</p>
+        <div class="tech-grid">
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🐍</span><div class="tech-name">Python</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🌐</span><div class="tech-name">HTML5</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🎨</span><div class="tech-name">CSS3</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">⚡</span><div class="tech-name">JavaScript</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🔧</span><div class="tech-name">Git</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">☁️</span><div class="tech-name">GitHub</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🤖</span><div class="tech-name">Arduino</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🦙</span><div class="tech-name">Ollama</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">💻</span><div class="tech-name">VS Code</div></div>
         </div>
-        <div class="tech-card reveal reveal-delay-2">
-          <span class="tech-icon">🎨</span>
-          <div class="tech-name">CSS3</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.75"></div></div>
+      </div>
+      <div class="tech-group">
+        <h3 class="tech-group-title">Conhecimento acadêmico</h3>
+        <p class="tech-group-note">Estudadas na graduação e em cursos, sem uso profissional.</p>
+        <div class="tech-grid">
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🗄️</span><div class="tech-name">SQL</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">☕</span><div class="tech-name">Java</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">📊</span><div class="tech-name">Power BI</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🧠</span><div class="tech-name">Machine Learning</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🔌</span><div class="tech-name">Redes e TCP/IP</div></div>
         </div>
-        <div class="tech-card reveal reveal-delay-3">
-          <span class="tech-icon">⚡</span>
-          <div class="tech-name">JavaScript</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.6"></div></div>
-        </div>
-        <div class="tech-card reveal">
-          <span class="tech-icon">🗄️</span>
-          <div class="tech-name">SQL</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.65"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-1">
-          <span class="tech-icon">🔧</span>
-          <div class="tech-name">Git</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.7"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-2">
-          <span class="tech-icon">📊</span>
-          <div class="tech-name">Power BI</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.65"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-3">
-          <span class="tech-icon">🤖</span>
-          <div class="tech-name">Arduino</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.7"></div></div>
-        </div>
-        <div class="tech-card reveal">
-          <span class="tech-icon">📈</span>
-          <div class="tech-name">Excel</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.85"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-1">
-          <span class="tech-icon">🧠</span>
-          <div class="tech-name">Mach. Learning</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.45"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-2">
-          <span class="tech-icon">💻</span>
-          <div class="tech-name">VS Code</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.9"></div></div>
-        </div>
-        <div class="tech-card reveal reveal-delay-3">
-          <span class="tech-icon">☁️</span>
-          <div class="tech-name">GitHub</div>
-          <div class="tech-level"><div class="tech-level-fill" style="--w:0.7"></div></div>
+      </div>
+      <div class="tech-group">
+        <h3 class="tech-group-title">Em desenvolvimento</h3>
+        <p class="tech-group-note">Em aprendizado, a partir do JARVIS e de estudo, com apoio de ferramentas de IA.</p>
+        <div class="tech-grid">
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🚀</span><div class="tech-name">FastAPI</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">⚛️</span><div class="tech-name">React</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🔷</span><div class="tech-name">TypeScript</div></div>
+          <div class="tech-card reveal"><span class="tech-icon" aria-hidden="true">🖥️</span><div class="tech-name">Electron</div></div>
         </div>
       </div>
     </div>
@@ -1596,156 +1605,114 @@
       </div>
       <div class="projects-grid">
 
-        <!-- Mattics -->
         <div class="project-card reveal">
           <div class="project-cover">
             <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.12),rgba(74,222,128,0.1));"></div>
-            <span class="project-cover-icon">🧠</span>
+            <span class="project-cover-icon" aria-hidden="true">🤖</span>
           </div>
           <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Hardware</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">HealthTech</span>
-            </div>
-            <h3 class="project-title">Projeto Mattics</h3>
-            <p class="project-desc">Desenvolvimento de jogos interativos e dispositivos robóticos voltados ao tratamento de Parkinson. Projeto multidisciplinar com tecnologia e saúde — um dos trabalhos mais significativos da minha graduação.</p>
+            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">FastAPI</span><span class="project-tag">IA local</span></div>
+            <h3 class="project-title">JARVIS — Assistente Pessoal com IA Local</h3>
+            <p class="project-desc">Assistente para Windows com modelos de linguagem locais (Ollama, Qwen), backend em FastAPI e interface desktop em Electron, React e TypeScript. A primeira versão funcional abre no Windows, conecta ao backend, responde em português e monitora CPU, memória e armazenamento. Projeto pessoal em desenvolvimento, feito com apoio de ferramentas de IA. Minha parte: requisitos, configuração do ambiente, integração, testes e diagnóstico de erros.</p>
             <div class="project-footer">
-              <span class="project-context">Acadêmico · 2022 – 2024</span>
-              <div class="project-links">
-                <span class="project-link" title="Projeto acadêmico — sem link público">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-                </span>
-              </div>
+              <span class="project-context">Pessoal · Em desenvolvimento</span>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Sensor de Fumaça -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-cover">
+            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.12),rgba(74,222,128,0.1));"></div>
+            <span class="project-cover-icon" aria-hidden="true">⚽</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">IA</span><span class="project-tag">Análise de dados</span><span class="project-tag">Futebol</span></div>
+            <h3 class="project-title">TCC — IA aplicada ao desempenho no futebol</h3>
+            <p class="project-desc">Trabalho de conclusão de curso apresentado em 2026 sobre a aplicação de técnicas de inteligência artificial e análise de dados à avaliação do desempenho de jogadores de futebol.</p>
+            <div class="project-footer">
+              <span class="project-context">Acadêmico · Defendido em 2026</span>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-cover">
+            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.12),rgba(74,222,128,0.1));"></div>
+            <span class="project-cover-icon" aria-hidden="true">🧠</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">Pesquisa aplicada</span><span class="project-tag">Jogos</span><span class="project-tag">Robótica</span></div>
+            <h3 class="project-title">Projeto Mattics</h3>
+            <p class="project-desc">Projeto acadêmico multidisciplinar com jogos e dispositivos robóticos experimentais, no contexto do tratamento de Parkinson. Participei da equipe em pesquisa aplicada, programação, testes e validação.</p>
+            <div class="project-footer">
+              <span class="project-context">Acadêmico · 2022 – 2024</span>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-cover">
+            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.1),rgba(124,58,237,0.1));"></div>
+            <span class="project-cover-icon" aria-hidden="true">🚐</span>
+          </div>
+          <div class="project-body">
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
+            <h3 class="project-title">Site para Transportes Executivos</h3>
+            <p class="project-desc">Projeto acadêmico em equipe de seis integrantes. Atuei no desenvolvimento das páginas, na estrutura visual e na organização da interface, e participei dos testes. A aplicação foi executada em ambiente local.</p>
+            <div class="project-footer">
+              <span class="project-context">Acadêmico · Equipe de seis</span>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
+            </div>
+          </div>
+        </div>
+
         <div class="project-card reveal reveal-delay-1">
           <div class="project-cover">
             <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(251,146,60,0.12),rgba(239,68,68,0.1));"></div>
-            <span class="project-cover-icon">🔥</span>
+            <span class="project-cover-icon" aria-hidden="true">🔥</span>
           </div>
           <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Arduino</span>
-              <span class="project-tag">Embarcados</span>
-              <span class="project-tag">IoT</span>
-            </div>
-            <h3 class="project-title">Sistema Detector de Fumaça</h3>
-            <p class="project-desc">Sistema de prevenção de incêndios com sensor eletrônico, microprocessador e alerta sonoro automático. Envolveu programação embarcada, lógica de sensores e validação em ambiente controlado.</p>
+            <div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">Sensores</span><span class="project-tag">Embarcados</span></div>
+            <h3 class="project-title">Detector de Fumaça com Alarme</h3>
+            <p class="project-desc">Protótipo da disciplina de Microprocessadores com Arduino e sensor de fumaça. Programei a lógica de monitoramento e o acionamento automático do alarme sonoro, e participei da montagem e dos testes em ambiente controlado.</p>
             <div class="project-footer">
               <span class="project-context">Microprocessadores · Acadêmico</span>
-              <div class="project-links">
-                <a href="https://github.com/Jeanzinr17" target="_blank" class="project-link" title="GitHub">
-                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Sistema Web -->
         <div class="project-card reveal reveal-delay-2">
           <div class="project-cover">
-            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.1),rgba(124,58,237,0.1));"></div>
-            <span class="project-cover-icon">🖥️</span>
+            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(251,146,60,0.12),rgba(239,68,68,0.1));"></div>
+            <span class="project-cover-icon" aria-hidden="true">🧴</span>
           </div>
           <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-            <h3 class="project-title">Sistema Web de Cadastro</h3>
-            <p class="project-desc">Aplicação web para cadastro, edição e consulta de informações. Foco em usabilidade, estruturação de dados e interface limpa. Desenvolvido como exercício completo de front-end aplicado.</p>
+            <div class="project-tags"><span class="project-tag">Arduino</span><span class="project-tag">Prototipagem</span></div>
+            <h3 class="project-title">Higienizador Automático</h3>
+            <p class="project-desc">Protótipo acadêmico desenvolvido com Arduino. É um projeto distinto do detector de fumaça.</p>
             <div class="project-footer">
-              <span class="project-context">Desenvolvimento Web</span>
-              <div class="project-links">
-                <a href="https://github.com/Jeanzinr17" target="_blank" class="project-link" title="GitHub">
-                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
+              <span class="project-context">Acadêmico</span>
+              <div class="project-links"><span class="project-nolink">Sem demonstração pública</span></div>
             </div>
           </div>
         </div>
 
-        <!-- Dashboard -->
         <div class="project-card reveal">
           <div class="project-cover">
-            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(124,58,237,0.1),rgba(0,210,255,0.08));"></div>
-            <span class="project-cover-icon">📊</span>
+            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.1),rgba(124,58,237,0.1));"></div>
+            <span class="project-cover-icon" aria-hidden="true">🚀</span>
           </div>
           <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Power BI</span>
-              <span class="project-tag">Excel</span>
-              <span class="project-tag">Dados</span>
-            </div>
-            <h3 class="project-title">Dashboard de Análise de Dados</h3>
-            <p class="project-desc">Painel interativo para leitura de métricas, visualização de indicadores e suporte estratégico a decisões. Aplicação de conceitos de Business Intelligence e análise quantitativa.</p>
-            <div class="project-footer">
-              <span class="project-context">Análise de Dados</span>
-              <div class="project-links">
-                <a href="https://github.com/Jeanzinr17" target="_blank" class="project-link" title="GitHub">
-                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ML -->
-        <div class="project-card reveal reveal-delay-1">
-          <div class="project-cover">
-            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(224,64,251,0.1),rgba(124,58,237,0.08));"></div>
-            <span class="project-cover-icon">🤖</span>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Scikit-learn</span>
-              <span class="project-tag">ML</span>
-            </div>
-            <h3 class="project-title">Classificação com Machine Learning</h3>
-            <p class="project-desc">Protótipo de aprendizado de máquina para classificação e análise de padrões em datasets. Exploração prática de algoritmos supervisionados com Python e bibliotecas de IA.</p>
-            <div class="project-footer">
-              <span class="project-context">IA Aplicada · Acadêmico</span>
-              <div class="project-links">
-                <a href="https://github.com/Jeanzinr17" target="_blank" class="project-link" title="GitHub">
-                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Portfolio -->
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-cover">
-            <div class="project-cover-bg" style="background: linear-gradient(135deg,rgba(0,210,255,0.08),rgba(74,222,128,0.08));"></div>
-            <span class="project-cover-icon">🚀</span>
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">GitHub Pages</span>
-            </div>
+            <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span><span class="project-tag">GitHub Pages</span></div>
             <h3 class="project-title">Portfólio Profissional</h3>
-            <p class="project-desc">Site pessoal desenvolvido do zero para apresentação profissional, com foco em identidade visual, design responsivo, performance e boa experiência para recrutadores.</p>
+            <p class="project-desc">Site pessoal de apresentação profissional em HTML, CSS e JavaScript, publicado no GitHub Pages. O código está em repositório público.</p>
             <div class="project-footer">
-              <span class="project-context">Projeto Pessoal · 2024–2025</span>
-              <div class="project-links">
-                <a href="https://jeanzinr17.github.io/portfolio/" target="_blank" class="project-link" title="Ver ao vivo">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                </a>
-                <a href="https://github.com/Jeanzinr17" target="_blank" class="project-link" title="GitHub">
-                  <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
+              <span class="project-context">Projeto pessoal</span>
+              <div class="project-links"><a href="https://github.com/Jeanzinr17/portfolio" target="_blank" rel="noopener noreferrer" class="project-link" title="Código no GitHub" aria-label="Código do portfólio no GitHub"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></div>
             </div>
           </div>
         </div>
@@ -1762,7 +1729,7 @@
       <div class="section-header reveal">
         <p class="label">// currículo online</p>
         <h2 class="section-title">Minha trajetória profissional</h2>
-        <p class="section-sub">Currículo completo e detalhado para recrutadores — formação, experiência, habilidades e diferenciais.</p>
+        <p class="section-sub">Formação, experiência, habilidades e projetos, em formato de leitura rápida para recrutadores.</p>
       </div>
 
       <div class="cv-layout">
@@ -1788,41 +1755,21 @@
             </div>
             <div class="cv-contact-item">
               <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              <a href="https://linkedin.com/in/jean-felipe-7501b2212" target="_blank">LinkedIn</a>
+              <a href="https://www.linkedin.com/in/jean-felipe-7501b2212" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
             <div class="cv-contact-item">
               <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-              <a href="https://github.com/Jeanzinr17" target="_blank">github.com/Jeanzinr17</a>
+              <a href="https://github.com/Jeanzinr17" target="_blank" rel="noopener noreferrer">github.com/Jeanzinr17</a>
             </div>
           </div>
 
           <!-- Habilidades técnicas -->
           <div class="cv-block reveal reveal-delay-1">
             <div class="cv-block-title">Habilidades Técnicas</div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">Python <span class="cv-skill-pct">75%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:75%"></div></div>
-            </div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">HTML &amp; CSS <span class="cv-skill-pct">80%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:80%"></div></div>
-            </div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">JavaScript <span class="cv-skill-pct">60%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:60%"></div></div>
-            </div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">SQL <span class="cv-skill-pct">65%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:65%"></div></div>
-            </div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">Excel / Power BI <span class="cv-skill-pct">85%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:85%"></div></div>
-            </div>
-            <div class="cv-skill-item">
-              <div class="cv-skill-name">Git &amp; GitHub <span class="cv-skill-pct">70%</span></div>
-              <div class="cv-skill-bar"><div class="cv-skill-fill" style="width:70%"></div></div>
-            </div>
+            <div class="cv-skill-item"><div class="cv-skill-name">Experiência prática</div><div class="cv-skill-list">Windows e suporte de TI, hardware, Excel, Guarani AFV, Bling, ferramentas de IA</div></div>
+            <div class="cv-skill-item"><div class="cv-skill-name">Aplicado em projetos</div><div class="cv-skill-list">Python, HTML, CSS, JavaScript, Git e GitHub, Arduino</div></div>
+            <div class="cv-skill-item"><div class="cv-skill-name">Conhecimento acadêmico</div><div class="cv-skill-list">SQL, Java, Power BI, Machine Learning</div></div>
+            <div class="cv-skill-item"><div class="cv-skill-name">Em desenvolvimento</div><div class="cv-skill-list">FastAPI, React, TypeScript, Electron</div></div>
           </div>
 
           <!-- Idiomas -->
@@ -1834,7 +1781,7 @@
             </div>
             <div class="cv-lang-item">
               <span>Inglês</span>
-              <span class="cv-lang-badge">Intermediário+</span>
+              <span class="cv-lang-badge">Avançado</span>
             </div>
           </div>
 
@@ -1844,12 +1791,12 @@
             <div class="cv-soft-list">
               <span class="cv-soft-tag">Analítico</span>
               <span class="cv-soft-tag">Proativo</span>
-              <span class="cv-soft-tag">Team Player</span>
+              <span class="cv-soft-tag">Trabalho em equipe</span>
               <span class="cv-soft-tag">Comunicação</span>
               <span class="cv-soft-tag">Organização</span>
               <span class="cv-soft-tag">Adaptabilidade</span>
-              <span class="cv-soft-tag">Visão Negócios</span>
-              <span class="cv-soft-tag">Aprendizado Rápido</span>
+              <span class="cv-soft-tag">Visão de negócios</span>
+              <span class="cv-soft-tag">Aprendizado contínuo</span>
             </div>
           </div>
 
@@ -1857,7 +1804,7 @@
           <div class="cv-download-wrap reveal">
             <a href="mailto:jeanfelipe711@gmail.com?subject=Solicitação%20de%20Currículo%20PDF" class="btn btn-primary" style="width:100%;justify-content:center;">
               <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              Baixar Currículo PDF
+              Solicitar currículo por e-mail
             </a>
           </div>
         </aside>
@@ -1868,7 +1815,7 @@
           <div class="cv-section reveal">
             <div class="cv-section-title">Resumo Profissional</div>
             <p class="cv-summary">
-              Estudante de Ciência da Computação no 8° período, com experiência prática em projetos tecnológicos de impacto real — da tecnologia aplicada à saúde (Projeto Mattics) a sistemas embarcados e dashboards de dados. Desde 2024, atuo como Assistente de Operações Comerciais, desenvolvendo habilidades em gestão, análise de dados e ferramentas digitais. Busco estágio em TI para aprofundar conhecimentos técnicos, contribuir em projetos desafiadores e construir uma carreira sólida em tecnologia.
+              Estudante de Ciência da Computação no 8º período, com formação técnica em Informática, experiência em suporte de TI e atuação profissional com sistemas empresariais (Guarani AFV, Bling e Excel). Desenvolvo projetos acadêmicos e pessoais em programação, IA aplicada, web e Arduino. Busco estágio ou vaga júnior em tecnologia para aprofundar a base técnica e contribuir com organização e resolução de problemas.
             </p>
           </div>
 
@@ -1876,7 +1823,7 @@
           <div class="cv-section reveal reveal-delay-1">
             <div class="cv-section-title">Objetivo Profissional</div>
             <p class="cv-summary">
-              Integrar uma equipe de tecnologia como estagiário nas áreas de desenvolvimento de software, análise de dados, infraestrutura ou inovação digital. Estou pronto para aprender, agregar valor desde o início e evoluir consistentemente em um ambiente técnico estimulante.
+              Integrar uma equipe de tecnologia em estágio ou vaga júnior nas áreas de suporte de TI, sistemas, dados ou desenvolvimento, aprendendo com profissionais experientes e contribuindo com organização e comunicação clara.
             </p>
           </div>
 
@@ -1894,7 +1841,8 @@
               <ul class="cv-entry-list">
                 <li>Formação com foco em programação, estrutura de dados, banco de dados, redes e desenvolvimento de sistemas</li>
                 <li>Participação em projetos práticos multidisciplinares ao longo da graduação</li>
-                <li>Cursando o 8° período — previsão de conclusão em julho de 2027</li>
+                <li>Cursando o 8º período — previsão de conclusão em julho de 2027</li>
+                <li>TCC apresentado em 2026, sobre IA aplicada à análise de desempenho no futebol</li>
               </ul>
             </div>
             <div class="cv-entry">
@@ -1907,8 +1855,7 @@
               </div>
               <ul class="cv-entry-list">
                 <li>Formação técnica em informática com base em hardware, software e suporte computacional</li>
-                <li>Atuação como estagiário-monitor de informática durante o período de formação</li>
-              </ul>
+                              </ul>
             </div>
           </div>
 
@@ -1924,25 +1871,26 @@
                 <span class="cv-entry-date">Out 2024 – Atual</span>
               </div>
               <ul class="cv-entry-list">
-                <li>Gestão das operações administrativas e organização estratégica do negócio</li>
-                <li>Controle financeiro, acompanhamento de contratos e comissões de vendas</li>
-                <li>Análise de mercado, identificação de oportunidades e planejamento estratégico</li>
-                <li>Domínio de ferramentas como Excel avançado, Bling ERP e Power BI para análise de dados</li>
-                <li>Desenvolvimento de dashboards e relatórios para suporte à tomada de decisão</li>
+                <li>Interface entre clientes, fornecedores e equipes de faturamento de importadoras parceiras</li>
+<li>Elaboração, conferência, acompanhamento e liberação de pedidos nos sistemas Guarani AFV e Bling</li>
+<li>Controles e relatórios em Excel e acompanhamento de pendências até a resolução</li>
+<li>Prospecção digital de clientes, importadoras, fornecedores e transportadoras, com apoio de ferramentas de IA e registro diário de contatos e respostas</li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
                 <div>
-                  <div class="cv-entry-title">Estagiário — Monitor de Informática</div>
+                  <div class="cv-entry-title">Estagiário de TI</div>
                   <div class="cv-entry-org">Colégio Quintanilha</div>
                 </div>
-                <span class="cv-entry-date">2017 – 2019</span>
+                <span class="cv-entry-date">Jan – Dez 2019</span>
               </div>
               <ul class="cv-entry-list">
-                <li>Apoio na elaboração e aplicação de aulas práticas de informática para alunos de diferentes níveis</li>
-                <li>Suporte técnico e orientação no uso de ferramentas computacionais</li>
-                <li>Gestão e manutenção do laboratório de informática</li>
+                <li>Suporte técnico e atendimento a alunos, professores e demais usuários</li>
+                <li>Instalação e configuração de sistemas operacionais e programas</li>
+                <li>Diagnóstico e resolução de problemas de hardware e software, montagem e manutenção de computadores</li>
+                <li>Configuração de impressoras e periféricos</li>
+                <li>Apoio ao laboratório de informática e às aulas práticas, orientando o uso das ferramentas digitais</li>
               </ul>
             </div>
           </div>
@@ -1951,6 +1899,32 @@
           <div class="cv-section reveal">
             <div class="cv-section-title">Projetos de Destaque</div>
             <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <div>
+                    <div class="cv-entry-title">JARVIS — Assistente Pessoal com IA Local</div>
+                    <div class="cv-entry-org">Projeto pessoal</div>
+                  </div>
+                  <span class="cv-entry-date">Em desenvolvimento</span>
+                </div>
+                <ul class="cv-entry-list">
+                  <li>Assistente para Windows com modelos locais (Ollama, Qwen), backend FastAPI e interface Electron, React e TypeScript</li>
+                  <li>Desenvolvido com apoio de ferramentas de IA; minha parte: requisitos, configuração do ambiente, integração, testes e diagnóstico de erros</li>
+                </ul>
+              </div>
+              <div class="cv-entry">
+                <div class="cv-entry-header">
+                  <div>
+                    <div class="cv-entry-title">TCC — IA aplicada ao desempenho no futebol</div>
+                    <div class="cv-entry-org">Universidade Veiga de Almeida</div>
+                  </div>
+                  <span class="cv-entry-date">2026</span>
+                </div>
+                <ul class="cv-entry-list">
+                  <li>Trabalho de conclusão de curso apresentado em 2026</li>
+                  <li>Aplicação de técnicas de inteligência artificial e análise de dados à avaliação do desempenho de jogadores</li>
+                </ul>
+              </div>
+              <div class="cv-entry">
               <div class="cv-entry-header">
                 <div>
                   <div class="cv-entry-title">Projeto Mattics — Tecnologia &amp; Saúde</div>
@@ -1959,22 +1933,22 @@
                 <span class="cv-entry-date">2022 – 2024</span>
               </div>
               <ul class="cv-entry-list">
-                <li>Desenvolvimento de jogos interativos e dispositivos robóticos para tratamento de Parkinson</li>
-                <li>Trabalho em equipe multidisciplinar com tecnologia e profissionais da saúde</li>
-                <li>Aplicação de robótica, programação e pesquisa aplicada em contexto real</li>
+                <li>Jogos e dispositivos robóticos experimentais, no contexto do tratamento de Parkinson</li>
+                <li>Trabalho em equipe multidisciplinar</li>
+                <li>Pesquisa aplicada, programação, testes e validação</li>
               </ul>
             </div>
             <div class="cv-entry">
               <div class="cv-entry-header">
                 <div>
-                  <div class="cv-entry-title">Sistema Detector de Fumaça com Alarme</div>
+                  <div class="cv-entry-title">Detector de Fumaça com Alarme (Arduino)</div>
                   <div class="cv-entry-org">Disciplina de Microprocessadores</div>
                 </div>
                 <span class="cv-entry-date">Acadêmico</span>
               </div>
               <ul class="cv-entry-list">
-                <li>Desenvolvimento de sistema embarcado com sensor de fumaça, microprocessador e alerta sonoro</li>
-                <li>Programação de lógica de monitoramento contínuo e resposta automática</li>
+                <li>Protótipo com Arduino e sensor de fumaça, com alerta sonoro automático</li>
+                <li>Programação da lógica de monitoramento e do acionamento do alarme</li>
                 <li>Validação e testes em ambiente controlado</li>
               </ul>
             </div>
@@ -1982,19 +1956,26 @@
 
           <!-- Certificações -->
           <div class="cv-section reveal reveal-delay-1">
-            <div class="cv-section-title">Certificações</div>
-            <div class="cv-entry">
-              <ul class="cv-entry-list">
-                <li>Introdução ao Git e GitHub — FGV</li>
-                <li>Tópicos em Machine Learning — FGV</li>
-                <li>Transformação Digital da Comunicação — FGV</li>
-                <li>Desenvolvimento de Sistemas Web: CSS e HTML — FGV</li>
-                <li>Introdução à Ciência de Dados — FGV</li>
-                <li>Inovação — Descomplica (24h) · 2025</li>
-                <li>Transformação Digital — UNIFESO (24h) · 2025</li>
-                <li>IA na Prática para Pequenos Negócios · 2025</li>
-              </ul>
-            </div>
+            <div class="cv-section-title">Certificados e formação complementar</div>
+              <div class="cv-entry">
+                <div class="cv-entry-org">FGV Online — declaração de participação em PDF (emitidas em 23/03/2026)</div>
+                <ul class="cv-entry-list">
+                  <li>Introdução à Ciência de Dados (60h)</li>
+                  <li>Introdução ao Git e GitHub (15h)</li>
+                  <li>Desenvolvimento de Sistemas Web: CSS e HTML (15h)</li>
+                  <li>Transformação Digital da Comunicação (14h)</li>
+                  <li>Tópicos em Machine Learning (10h)</li>
+                </ul>
+              </div>
+              <div class="cv-entry">
+                <div class="cv-entry-org">Cursos complementares (certificado não publicado neste site)</div>
+                <ul class="cv-entry-list">
+                  <li>Inovação — Descomplica (24h) · 2025</li>
+                  <li>Transformação Digital — UNIFESO (24h) · 2025</li>
+                  <li>IA na Prática para Pequenos Negócios · 2025</li>
+                  <li>Inglês — Cultura Inglesa · 2019–2024</li>
+                </ul>
+              </div>
           </div>
         </main>
       </div>
@@ -2008,138 +1989,105 @@
     <div class="container">
       <div class="section-header reveal">
         <p class="label">// certificações</p>
-        <h2 class="section-title">Certificados &amp; Cursos</h2>
-        <p class="section-sub">Formações complementares que ampliam minha base técnica e comprovam comprometimento com o aprendizado contínuo.</p>
+        <h2 class="section-title">Certificados &amp; Formação Complementar</h2>
+        <p class="section-sub">Os cinco PDFs são declarações de participação emitidas pela FGV Online em cursos autoinstrucionais. Podem ser visualizados e baixados.</p>
       </div>
       <div class="certs-grid">
 
         <div class="cert-card reveal"
           data-title="Introdução ao Git e GitHub"
-          data-url="https://jeanzinr17.github.io/portfolio/assets/certificados/14523502_certificado_Fgv.pdf">
-          <div class="cert-thumb" onclick="openCert(this.parentElement)">🔗</div>
+          data-url="assets/certificados/14523502_certificado_Fgv.pdf">
+          <div class="cert-thumb" aria-hidden="true" onclick="openCert(this.parentElement)">🔗</div>
           <div class="cert-body">
             <div class="cert-institution">FGV</div>
             <div class="cert-title">Introdução ao Git e GitHub</div>
-            <div class="cert-year">Fundação Getulio Vargas</div>
+            <div class="cert-year">15 horas · declaração emitida em 23/03/2026</div>
             <div class="cert-actions">
-              <button class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
-              <a class="cert-btn cert-btn-dl" href="https://jeanzinr17.github.io/portfolio/assets/certificados/14523502_certificado_Fgv.pdf" download>Baixar</a>
+              <button type="button" class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
+              <a class="cert-btn cert-btn-dl" href="assets/certificados/14523502_certificado_Fgv.pdf" download>Baixar</a>
             </div>
           </div>
         </div>
 
         <div class="cert-card reveal reveal-delay-1"
           data-title="Tópicos em Machine Learning"
-          data-url="https://jeanzinr17.github.io/portfolio/assets/certificados/14523504_certificado_Fgv.pdf">
-          <div class="cert-thumb" onclick="openCert(this.parentElement)">🤖</div>
+          data-url="assets/certificados/14523504_certificado_Fgv.pdf">
+          <div class="cert-thumb" aria-hidden="true" onclick="openCert(this.parentElement)">🤖</div>
           <div class="cert-body">
             <div class="cert-institution">FGV</div>
             <div class="cert-title">Tópicos em Machine Learning</div>
-            <div class="cert-year">Fundação Getulio Vargas</div>
+            <div class="cert-year">10 horas · declaração emitida em 23/03/2026</div>
             <div class="cert-actions">
-              <button class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
-              <a class="cert-btn cert-btn-dl" href="https://jeanzinr17.github.io/portfolio/assets/certificados/14523504_certificado_Fgv.pdf" download>Baixar</a>
+              <button type="button" class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
+              <a class="cert-btn cert-btn-dl" href="assets/certificados/14523504_certificado_Fgv.pdf" download>Baixar</a>
             </div>
           </div>
         </div>
 
         <div class="cert-card reveal reveal-delay-2"
           data-title="Transformação Digital da Comunicação"
-          data-url="https://jeanzinr17.github.io/portfolio/assets/certificados/14609790_certificado_Fgv.pdf">
-          <div class="cert-thumb" onclick="openCert(this.parentElement)">📡</div>
+          data-url="assets/certificados/14609790_certificado_Fgv.pdf">
+          <div class="cert-thumb" aria-hidden="true" onclick="openCert(this.parentElement)">📡</div>
           <div class="cert-body">
             <div class="cert-institution">FGV</div>
             <div class="cert-title">Transformação Digital da Comunicação</div>
-            <div class="cert-year">Fundação Getulio Vargas</div>
+            <div class="cert-year">14 horas · declaração emitida em 23/03/2026</div>
             <div class="cert-actions">
-              <button class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
-              <a class="cert-btn cert-btn-dl" href="https://jeanzinr17.github.io/portfolio/assets/certificados/14609790_certificado_Fgv.pdf" download>Baixar</a>
+              <button type="button" class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
+              <a class="cert-btn cert-btn-dl" href="assets/certificados/14609790_certificado_Fgv.pdf" download>Baixar</a>
             </div>
           </div>
         </div>
 
         <div class="cert-card reveal"
           data-title="Desenvolvimento de Sistemas Web: CSS e HTML"
-          data-url="https://jeanzinr17.github.io/portfolio/assets/certificados/14523496_certificado_Fgv.pdf">
-          <div class="cert-thumb" onclick="openCert(this.parentElement)">🌐</div>
+          data-url="assets/certificados/14523496_certificado_Fgv.pdf">
+          <div class="cert-thumb" aria-hidden="true" onclick="openCert(this.parentElement)">🌐</div>
           <div class="cert-body">
             <div class="cert-institution">FGV</div>
             <div class="cert-title">Desenvolvimento de Sistemas Web: CSS e HTML</div>
-            <div class="cert-year">Fundação Getulio Vargas</div>
+            <div class="cert-year">15 horas · declaração emitida em 23/03/2026</div>
             <div class="cert-actions">
-              <button class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
-              <a class="cert-btn cert-btn-dl" href="https://jeanzinr17.github.io/portfolio/assets/certificados/14523496_certificado_Fgv.pdf" download>Baixar</a>
+              <button type="button" class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
+              <a class="cert-btn cert-btn-dl" href="assets/certificados/14523496_certificado_Fgv.pdf" download>Baixar</a>
             </div>
           </div>
         </div>
 
         <div class="cert-card reveal reveal-delay-1"
           data-title="Introdução à Ciência de Dados"
-          data-url="https://jeanzinr17.github.io/portfolio/assets/certificados/14479392_certificado_Fgv.pdf">
-          <div class="cert-thumb" onclick="openCert(this.parentElement)">📊</div>
+          data-url="assets/certificados/14479392_certificado_Fgv.pdf">
+          <div class="cert-thumb" aria-hidden="true" onclick="openCert(this.parentElement)">📊</div>
           <div class="cert-body">
             <div class="cert-institution">FGV</div>
             <div class="cert-title">Introdução à Ciência de Dados</div>
-            <div class="cert-year">Fundação Getulio Vargas</div>
+            <div class="cert-year">60 horas · declaração emitida em 23/03/2026</div>
             <div class="cert-actions">
-              <button class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
-              <a class="cert-btn cert-btn-dl" href="https://jeanzinr17.github.io/portfolio/assets/certificados/14479392_certificado_Fgv.pdf" download>Baixar</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-2"
-          data-title="Inovação"
-          data-url="#">
-          <div class="cert-thumb">💡</div>
-          <div class="cert-body">
-            <div class="cert-institution">Descomplica</div>
-            <div class="cert-title">Inovação</div>
-            <div class="cert-year">24 horas · 2025</div>
-            <div class="cert-actions">
-              <span class="cert-btn cert-btn-view" style="opacity:0.5;cursor:default;">Em breve</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card reveal"
-          data-title="Transformação Digital"
-          data-url="#">
-          <div class="cert-thumb">🚀</div>
-          <div class="cert-body">
-            <div class="cert-institution">UNIFESO</div>
-            <div class="cert-title">Transformação Digital</div>
-            <div class="cert-year">24 horas · 2025</div>
-            <div class="cert-actions">
-              <span class="cert-btn cert-btn-view" style="opacity:0.5;cursor:default;">Em breve</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card reveal reveal-delay-1"
-          data-title="IA na Prática para Pequenos Negócios"
-          data-url="#">
-          <div class="cert-thumb">🧠</div>
-          <div class="cert-body">
-            <div class="cert-institution">Curso Livre</div>
-            <div class="cert-title">IA na Prática para Pequenos Negócios</div>
-            <div class="cert-year">2025</div>
-            <div class="cert-actions">
-              <span class="cert-btn cert-btn-view" style="opacity:0.5;cursor:default;">Em breve</span>
+              <button type="button" class="cert-btn cert-btn-view" onclick="openCert(this.closest('.cert-card'))">Visualizar</button>
+              <a class="cert-btn cert-btn-dl" href="assets/certificados/14479392_certificado_Fgv.pdf" download>Baixar</a>
             </div>
           </div>
         </div>
 
       </div>
+      <div class="extra-courses reveal">
+        <h3>Formação complementar sem certificado publicado</h3>
+        <p>Cursos sem certificado disponível neste site.</p>
+        <ul>
+          <li>Inovação — Descomplica <span>· 24 horas · 2025</span></li>
+          <li>Transformação Digital — UNIFESO <span>· 24 horas · 2025</span></li>
+          <li>IA na Prática para Pequenos Negócios <span>· curso livre · 2025</span></li>
+          <li>Inglês — Cultura Inglesa <span>· 2019 a 2024</span></li>
+        </ul>
+      </div>
     </div>
   </section>
-
   <!-- Cert Modal -->
-  <div class="cert-modal" id="cert-modal" onclick="closeCertModal(event)">
+  <div class="cert-modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" onclick="closeCertModal(event)">
     <div class="cert-modal-inner">
       <div class="cert-modal-header">
         <span class="cert-modal-title" id="cert-modal-title"></span>
-        <button class="cert-modal-close" onclick="document.getElementById('cert-modal').classList.remove('open')">✕</button>
+        <button class="cert-modal-close" type="button" aria-label="Fechar certificado" onclick="closeCert()">✕</button>
       </div>
       <div class="cert-modal-body">
         <iframe id="cert-modal-iframe" src="" title="Certificado"></iframe>
@@ -2166,13 +2114,11 @@
           <div class="timeline-title">Técnico em Informática + Ensino Médio</div>
           <div class="timeline-org">Colégio Quintanilha · Rio de Janeiro</div>
           <div class="timeline-body">
-            Formação técnica e ensino médio simultâneos, com base em hardware, software e suporte.
-            Atuou como monitor de informática, desenvolvendo comunicação e responsabilidade técnica desde cedo.
+            Formação técnica e ensino médio simultâneos, com base em hardware, software e suporte. Em 2019, estágio de TI na instituição.
           </div>
           <div class="timeline-tags">
             <span class="timeline-tag">Informática</span>
             <span class="timeline-tag">Suporte Técnico</span>
-            <span class="timeline-tag">Ensino</span>
           </div>
         </div>
 
@@ -2193,12 +2139,12 @@
 
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
-          <div class="timeline-period">Mar 2020 – Atual</div>
+          <div class="timeline-period">Mar 2020 – Jul 2027 (previsto)</div>
           <div class="timeline-title">Bacharelado em Ciência da Computação</div>
           <div class="timeline-org">Universidade Veiga de Almeida</div>
           <div class="timeline-body">
             Formação ampla em fundamentos de computação: algoritmos, estrutura de dados, banco de dados,
-            redes, sistemas operacionais e desenvolvimento de software. Atualmente no 8° período.
+            redes, sistemas operacionais e desenvolvimento de software. Atualmente no 8º período, com conclusão prevista para julho de 2027.
           </div>
           <div class="timeline-tags">
             <span class="timeline-tag">BCC</span>
@@ -2214,13 +2160,11 @@
           <div class="timeline-title">Projeto Mattics — Tecnologia aplicada à Saúde</div>
           <div class="timeline-org">Universidade Veiga de Almeida · Projeto Acadêmico</div>
           <div class="timeline-body">
-            Desenvolvimento de jogos terapêuticos e dispositivos robóticos para auxiliar no tratamento de
-            Parkinson. Trabalho multidisciplinar com saúde e tecnologia — um dos projetos mais impactantes da graduação.
+            Projeto acadêmico multidisciplinar com jogos e dispositivos robóticos experimentais, no contexto do tratamento de Parkinson.
           </div>
           <div class="timeline-tags">
             <span class="timeline-tag">HealthTech</span>
             <span class="timeline-tag">Robótica</span>
-            <span class="timeline-tag">Python</span>
             <span class="timeline-tag">Multidisciplinar</span>
           </div>
         </div>
@@ -2231,31 +2175,41 @@
           <div class="timeline-title">Assistente de Operações Comerciais</div>
           <div class="timeline-org">Empresa Própria (MEI)</div>
           <div class="timeline-body">
-            Primeiro envolvimento profissional real: gestão de operações, controle financeiro, análise de mercado
-            e domínio de ferramentas como Excel avançado, Power BI e ERP Bling. Desenvolveu visão
-            de negócio e capacidade de trabalhar com dados em contexto corporativo.
+            Acompanhamento de pedidos entre clientes, fornecedores e faturamento em Guarani AFV e Bling, controles em Excel e prospecção digital com apoio de ferramentas de IA.
           </div>
           <div class="timeline-tags">
             <span class="timeline-tag">Excel</span>
-            <span class="timeline-tag">Power BI</span>
-            <span class="timeline-tag">Gestão</span>
-            <span class="timeline-tag">ERP</span>
+            <span class="timeline-tag">Guarani AFV</span>
+            <span class="timeline-tag">Bling</span>
+            <span class="timeline-tag">Prospecção</span>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2026</div>
+          <div class="timeline-title">TCC apresentado</div>
+          <div class="timeline-org">Universidade Veiga de Almeida</div>
+          <div class="timeline-body">
+            Trabalho de conclusão de curso sobre inteligência artificial e análise de dados aplicadas ao desempenho de jogadores de futebol.
+          </div>
+          <div class="timeline-tags">
+            <span class="timeline-tag">IA</span>
+            <span class="timeline-tag">Análise de dados</span>
           </div>
         </div>
 
         <div class="timeline-item reveal reveal-delay-1">
           <div class="timeline-dot" style="border-color: var(--violet); box-shadow: 0 0 10px var(--violet);"></div>
-          <div class="timeline-period" style="color: var(--violet);">2025 – 2026 · Próximo passo</div>
-          <div class="timeline-title">Estágio em TI</div>
-          <div class="timeline-org">Em busca da oportunidade certa</div>
+          <div class="timeline-period" style="color: var(--violet);">Próximo passo</div>
+          <div class="timeline-title">Estágio ou vaga júnior em TI</div>
+          <div class="timeline-org">Em busca de oportunidade</div>
           <div class="timeline-body">
-            Pronto para ingressar em um ambiente técnico profissional. Busco estágio em desenvolvimento,
-            dados ou infraestrutura para aplicar meu conhecimento, aprender com profissionais seniores
-            e dar o próximo passo consistente na carreira.
+            Busco estágio ou vaga júnior em suporte, sistemas, dados ou desenvolvimento, para aplicar o que aprendi e crescer ao lado de uma equipe de tecnologia.
           </div>
           <div class="timeline-tags">
-            <span class="timeline-tag" style="border-color: rgba(124,58,237,0.3); color: var(--violet);">Disponível</span>
-            <span class="timeline-tag" style="border-color: rgba(124,58,237,0.3); color: var(--violet);">Full Time</span>
+            <span class="timeline-tag" style="border-color: rgba(124,58,237,0.3); color: var(--violet);">Estágio</span>
+            <span class="timeline-tag" style="border-color: rgba(124,58,237,0.3); color: var(--violet);">Vaga júnior</span>
           </div>
         </div>
 
@@ -2276,7 +2230,7 @@
             <h2 class="section-title">Vamos conversar?</h2>
             <p>
               Estou aberto a conversas sobre estágio, vagas de entrada em TI
-              e oportunidades de colaboração. Me manda uma mensagem — respondo rápido.
+              e oportunidades de colaboração. Me mande uma mensagem.
             </p>
           </div>
           <div class="contact-links">
@@ -2287,28 +2241,28 @@
                 <div class="contact-link-val">jeanfelipe711@gmail.com</div>
               </div>
             </a>
-            <a href="https://api.whatsapp.com/send?phone=5521970263143" target="_blank" class="contact-link-item reveal reveal-delay-2">
+            <a href="https://api.whatsapp.com/send?phone=5521970263143" target="_blank" rel="noopener noreferrer" class="contact-link-item reveal reveal-delay-2">
               <div class="contact-link-icon">💬</div>
               <div>
                 <div class="contact-link-label">WhatsApp</div>
                 <div class="contact-link-val">(21) 97026-3143</div>
               </div>
             </a>
-            <a href="https://linkedin.com/in/jean-felipe-7501b2212" target="_blank" class="contact-link-item reveal reveal-delay-3">
+            <a href="https://www.linkedin.com/in/jean-felipe-7501b2212" target="_blank" rel="noopener noreferrer" class="contact-link-item reveal reveal-delay-3">
               <div class="contact-link-icon">💼</div>
               <div>
                 <div class="contact-link-label">LinkedIn</div>
                 <div class="contact-link-val">jean-felipe-7501b2212</div>
               </div>
             </a>
-            <a href="https://github.com/Jeanzinr17" target="_blank" class="contact-link-item reveal">
+            <a href="https://github.com/Jeanzinr17" target="_blank" rel="noopener noreferrer" class="contact-link-item reveal">
               <div class="contact-link-icon">⚙️</div>
               <div>
                 <div class="contact-link-label">GitHub</div>
                 <div class="contact-link-val">github.com/Jeanzinr17</div>
               </div>
             </a>
-            <a href="https://instagram.com/jean_deligt" target="_blank" class="contact-link-item reveal reveal-delay-1">
+            <a href="https://instagram.com/jean_deligt" target="_blank" rel="noopener noreferrer" class="contact-link-item reveal reveal-delay-1">
               <div class="contact-link-icon">📸</div>
               <div>
                 <div class="contact-link-label">Instagram</div>
@@ -2322,25 +2276,25 @@
         <div class="contact-form reveal reveal-delay-2">
           <div style="margin-bottom:1.5rem;">
             <p class="label">Envie uma mensagem</p>
-            <p style="color:var(--muted);font-size:0.88rem;margin-top:0.3rem;">Preencha o formulário e envie direto por e-mail.</p>
+            <p style="color:var(--muted);font-size:0.88rem;margin-top:0.3rem;">Ao clicar em enviar, seu aplicativo de e-mail abre com a mensagem preenchida. Este site não envia nada por conta própria.</p>
           </div>
           <div class="form-group">
-            <label class="form-label">Nome</label>
-            <input type="text" class="form-input" id="form-name" placeholder="Seu nome" />
+            <label class="form-label" for="form-name">Nome</label>
+            <input type="text" class="form-input" id="form-name" autocomplete="name" placeholder="Seu nome" />
           </div>
           <div class="form-group">
-            <label class="form-label">E-mail</label>
-            <input type="email" class="form-input" id="form-email" placeholder="seu@email.com" />
+            <label class="form-label" for="form-email">E-mail</label>
+            <input type="email" class="form-input" id="form-email" autocomplete="email" placeholder="seu@email.com" />
           </div>
           <div class="form-group">
-            <label class="form-label">Assunto</label>
+            <label class="form-label" for="form-subject">Assunto</label>
             <input type="text" class="form-input" id="form-subject" placeholder="Estágio, oportunidade, etc." />
           </div>
           <div class="form-group">
-            <label class="form-label">Mensagem</label>
+            <label class="form-label" for="form-message">Mensagem</label>
             <textarea class="form-input" id="form-message" placeholder="Sua mensagem..."></textarea>
           </div>
-          <button class="form-submit" onclick="sendMail()">Enviar Mensagem ↗</button>
+          <button type="button" class="form-submit" onclick="sendMail()">Abrir no aplicativo de e-mail ↗</button>
         </div>
       </div>
     </div>
@@ -2352,22 +2306,22 @@
   <footer>
     <div class="container">
       <div class="footer-name">Jean Felipe<span style="color:var(--cyan);">.</span></div>
-      <p class="footer-tagline">Estudante de Ciência da Computação · Candidato a Estágio em TI</p>
+      <p class="footer-tagline">Estudante de Ciência da Computação · Estágio e vaga júnior em TI</p>
       <div class="footer-social">
-        <a href="https://github.com/Jeanzinr17" target="_blank" title="GitHub">
+        <a href="https://github.com/Jeanzinr17" target="_blank" rel="noopener noreferrer" title="GitHub">
           <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
         </a>
-        <a href="https://linkedin.com/in/jean-felipe-7501b2212" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/jean-felipe-7501b2212" target="_blank" rel="noopener noreferrer" title="LinkedIn">
           <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="https://instagram.com/jean_deligt" target="_blank" title="Instagram">
+        <a href="https://instagram.com/jean_deligt" target="_blank" rel="noopener noreferrer" title="Instagram">
           <svg fill="currentColor" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
         </a>
         <a href="mailto:jeanfelipe711@gmail.com" title="E-mail">
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
         </a>
       </div>
-      <p class="footer-copy">© 2025 Jean Felipe Souza Coelho · Desenvolvido com HTML, CSS &amp; JavaScript</p>
+      <p class="footer-copy">© 2026 Jean Felipe Souza Coelho · Desenvolvido com HTML, CSS &amp; JavaScript</p>
     </div>
   </footer>
 
@@ -2378,9 +2332,11 @@
        JAVASCRIPT
   ============================================================ -->
   <script>
-    // ─── NAV SCROLL ─────────────────────────────────────────────
+    // ─── NAVEGAÇÃO ──────────────────────────────────────────────
     const navbar = document.getElementById('navbar');
     const backTop = document.getElementById('back-top');
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
 
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
@@ -2390,76 +2346,70 @@
         navbar.classList.remove('scrolled');
         backTop.classList.remove('visible');
       }
-
-      // Active nav link
       const sections = document.querySelectorAll('section[id]');
-      const scrollY = window.scrollY + 100;
-      sections.forEach(s => {
-        const link = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+      const y = window.scrollY + 100;
+      sections.forEach(sec => {
+        const link = document.querySelector(`.nav-links a[href="#${sec.id}"]`);
         if (!link) return;
-        if (s.offsetTop <= scrollY && s.offsetTop + s.offsetHeight > scrollY) {
+        if (sec.offsetTop <= y && sec.offsetTop + sec.offsetHeight > y) {
           document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
           link.classList.add('active');
         }
       });
     });
 
-    // ─── HAMBURGER ──────────────────────────────────────────────
-    document.getElementById('hamburger').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('open');
-    });
-    function closeMobileMenu() {
-      document.getElementById('mobile-menu').classList.remove('open');
+    // ─── MENU MOBILE ────────────────────────────────────────────
+    function setMenu(open) {
+      mobileMenu.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hamburger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    }
+    hamburger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+    function closeMobileMenu() { setMenu(false); }
+
+    // ─── REVELAR AO ROLAR ───────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('visible'));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => observer.observe(el));
     }
 
-    // ─── INTERSECTION OBSERVER — REVEAL ─────────────────────────
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Animate skill bars on cv-block
-          if (entry.target.classList.contains('cv-block')) {
-            entry.target.querySelectorAll('.cv-skill-fill').forEach(el => {
-              el.style.transform = `scaleX(${parseFloat(el.style.width)/100})`;
-            });
-          }
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => observer.observe(el));
-
-    // ─── TECH CARDS LEVEL BAR ───────────────────────────────────
-    const techObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          const fill = e.target.querySelector('.tech-level-fill');
-          if (fill) fill.style.transform = `scaleX(${fill.style.getPropertyValue('--w') || 0.7})`;
-        }
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.tech-card').forEach(c => techObs.observe(c));
-
-    // ─── CERT MODAL ─────────────────────────────────────────────
+    // ─── MODAL DE CERTIFICADOS ──────────────────────────────────
+    const certModal = document.getElementById('cert-modal');
+    const certIframe = document.getElementById('cert-modal-iframe');
+    let lastFocus = null;
     function openCert(card) {
       const url = card.dataset.url;
       const title = card.dataset.title;
       if (!url || url === '#') return;
+      lastFocus = document.activeElement;
       document.getElementById('cert-modal-title').textContent = title;
-      document.getElementById('cert-modal-iframe').src = url;
-      document.getElementById('cert-modal').classList.add('open');
+      certIframe.src = url;
+      certModal.classList.add('open');
+      certModal.querySelector('.cert-modal-close').focus();
+    }
+    function closeCert() {
+      certModal.classList.remove('open');
+      certIframe.src = '';
+      if (lastFocus) lastFocus.focus();
     }
     function closeCertModal(e) {
-      if (e.target === document.getElementById('cert-modal')) {
-        document.getElementById('cert-modal').classList.remove('open');
-      }
+      if (e.target === certModal) closeCert();
     }
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') document.getElementById('cert-modal').classList.remove('open');
+      if (e.key !== 'Escape') return;
+      if (certModal.classList.contains('open')) closeCert();
+      else if (mobileMenu.classList.contains('open')) { setMenu(false); hamburger.focus(); }
     });
 
-    // ─── FORM → MAILTO ──────────────────────────────────────────
+    // ─── FORMULÁRIO → ABRE O APLICATIVO DE E-MAIL ───────────────
     function sendMail() {
       const name    = document.getElementById('form-name').value.trim();
       const email   = document.getElementById('form-email').value.trim();
@@ -2470,1424 +2420,9 @@
         return;
       }
       const body = `Nome: ${name}\nE-mail: ${email}\n\n${msg}`;
-      const mailto = `mailto:jeanfelipe711@gmail.com?subject=${encodeURIComponent(subject || 'Mensagem do Portfólio')}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
+      window.location.href = `mailto:jeanfelipe711@gmail.com?subject=${encodeURIComponent(subject || 'Mensagem do Portfólio')}&body=${encodeURIComponent(body)}`;
     }
-
-    // ─── CV SKILL BARS (trigger on load + scroll) ───────────────
-    const cvBlockObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.cv-skill-fill').forEach(fill => {
-            const pct = parseFloat(fill.style.width) / 100;
-            fill.style.transform = `scaleX(${pct})`;
-          });
-        }
-      });
-    }, { threshold: 0.2 });
-    document.querySelectorAll('.cv-block').forEach(b => cvBlockObs.observe(b));
   </script>
 
-</body>
-</html>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jean Felipe | Developer</title>
-
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1055/1055687.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, Helvetica, sans-serif;
-      scroll-behavior:smooth;
-    }
-
-    :root{
-      --bg:#0f172a;
-      --bg-soft:#111827;
-      --card:#1e293b;
-      --text:#ffffff;
-      --muted:#cbd5e1;
-      --primary:#38bdf8;
-      --primary-dark:#0ea5e9;
-      --border:rgba(255,255,255,0.08);
-      --shadow:0 18px 40px rgba(0,0,0,0.28);
-    }
-
-    body{
-      background:var(--bg);
-      color:var(--text);
-      transition:0.35s;
-      overflow-x:hidden;
-    }
-
-    .light{
-      --bg:#f1f5f9;
-      --bg-soft:#ffffff;
-      --card:#ffffff;
-      --text:#111827;
-      --muted:#475569;
-      --border:rgba(15,23,42,0.08);
-      --shadow:0 18px 40px rgba(15,23,42,0.10);
-    }
-
-    nav{
-      position:fixed;
-      top:0;
-      width:100%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 60px;
-      background:rgba(2,6,23,0.72);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid var(--border);
-      z-index:1000;
-    }
-
-    nav .brand{
-      font-size:1.1rem;
-      font-weight:700;
-      letter-spacing:0.4px;
-    }
-
-    nav .nav-links{
-      display:flex;
-      align-items:center;
-      flex-wrap:wrap;
-    }
-
-    nav a{
-      color:var(--text);
-      text-decoration:none;
-      margin-left:24px;
-      font-weight:700;
-      transition:0.25s;
-      position:relative;
-    }
-
-    nav a:hover{
-      color:var(--primary);
-    }
-
-    .toggle{
-      cursor:pointer;
-      margin-left:22px;
-      font-size:1.1rem;
-      color:var(--text);
-    }
-
-    .hero{
-      min-height:100vh;
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      align-items:center;
-      gap:40px;
-      padding:140px 10% 80px;
-      position:relative;
-    }
-
-    .hero::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 30%),
-        radial-gradient(circle at 80% 30%, rgba(14,165,233,0.12), transparent 25%);
-      pointer-events:none;
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-content .badge{
-      display:inline-block;
-      padding:8px 14px;
-      border:1px solid var(--border);
-      border-radius:999px;
-      margin-bottom:18px;
-      color:var(--primary);
-      background:rgba(56,189,248,0.07);
-      font-size:0.92rem;
-      font-weight:700;
-    }
-
-    .hero h1{
-      font-size:clamp(2.6rem, 6vw, 4.5rem);
-      line-height:1.05;
-      margin-bottom:14px;
-    }
-
-    .hero p{
-      color:var(--muted);
-      font-size:1.08rem;
-      line-height:1.8;
-      max-width:620px;
-      margin-bottom:26px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:13px 24px;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight:700;
-      transition:0.28s;
-      border:none;
-      cursor:pointer;
-      box-shadow:0 10px 24px rgba(56,189,248,0.18);
-    }
-
-    .btn-primary{
-      background:var(--primary);
-      color:white;
-    }
-
-    .btn-primary:hover{
-      background:var(--primary-dark);
-      transform:translateY(-2px);
-    }
-
-    .btn-outline{
-      background:transparent;
-      color:var(--primary);
-      border:1px solid var(--primary);
-      box-shadow:none;
-    }
-
-    .btn-outline:hover{
-      background:var(--primary);
-      color:white;
-      transform:translateY(-2px);
-    }
-
-    .hero-photo-wrap{
-      display:flex;
-      justify-content:center;
-      position:relative;
-      z-index:2;
-    }
-
-    .hero-photo{
-      width:min(400px, 90%);
-      aspect-ratio:4/5;
-      border-radius:28px;
-      overflow:hidden;
-      border:1px solid var(--border);
-      box-shadow:var(--shadow);
-      position:relative;
-      background:linear-gradient(180deg, rgba(56,189,248,0.15), rgba(15,23,42,0.2));
-    }
-
-    .hero-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      display:block;
-    }
-
-    .hero-photo::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(to top, rgba(15,23,42,0.35), transparent 35%);
-      pointer-events:none;
-    }
-
-    section{
-      padding:95px 10%;
-      position:relative;
-      z-index:2;
-    }
-
-    h2{
-      font-size:2.2rem;
-      text-align:center;
-      margin-bottom:14px;
-    }
-
-    .section-subtitle{
-      text-align:center;
-      max-width:820px;
-      margin:0 auto 38px;
-      color:var(--muted);
-      line-height:1.8;
-    }
-
-    .glass,
-    .card,
-    .project-slide,
-    .cert-card{
-      background:rgba(30,41,59,0.74);
-      border:1px solid var(--border);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(14px);
-    }
-
-    .light .glass,
-    .light .card,
-    .light .project-slide,
-    .light .cert-card{
-      background:rgba(255,255,255,0.82);
-    }
-
-    .about-box{
-      max-width:900px;
-      margin:0 auto;
-      border-radius:22px;
-      padding:34px;
-      text-align:center;
-    }
-
-    .about-box p{
-      line-height:1.9;
-      color:var(--muted);
-    }
-
-    .tech-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-      gap:24px;
-      text-align:center;
-    }
-
-    .tech-item{
-      border-radius:20px;
-      padding:26px 18px;
-      transition:0.28s;
-    }
-
-    .tech-item:hover{
-      transform:translateY(-8px);
-    }
-
-    .tech-item i{
-      font-size:2.6rem;
-      margin-bottom:12px;
-      color:var(--primary);
-    }
-
-    .tech-item p{
-      font-weight:700;
-    }
-
-    .projects-carousel-wrap{
-      position:relative;
-      max-width:1100px;
-      margin:0 auto;
-    }
-
-    .projects-carousel{
-      display:flex;
-      gap:18px;
-      overflow-x:auto;
-      scroll-behavior:smooth;
-      padding:6px 2px 12px;
-      scrollbar-width:none;
-    }
-
-    .projects-carousel::-webkit-scrollbar{
-      display:none;
-    }
-
-    .project-slide{
-      min-width:320px;
-      max-width:320px;
-      border-radius:22px;
-      padding:28px;
-      flex:0 0 auto;
-      transition:0.28s;
-    }
-
-    .project-slide:hover{
-      transform:translateY(-8px);
-    }
-
-    .project-slide .project-icon{
-      width:56px;
-      height:56px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:16px;
-      background:rgba(56,189,248,0.12);
-      color:var(--primary);
-      font-size:1.5rem;
-      margin-bottom:18px;
-    }
-
-    .project-slide h3{
-      margin-bottom:12px;
-      font-size:1.2rem;
-    }
-
-    .project-slide p{
-      color:var(--muted);
-      line-height:1.75;
-      font-size:0.96rem;
-    }
-
-    .carousel-controls{
-      display:flex;
-      justify-content:center;
-      gap:14px;
-      margin-top:24px;
-    }
-
-    .carousel-btn{
-      width:46px;
-      height:46px;
-      border-radius:50%;
-      border:1px solid var(--border);
-      background:rgba(56,189,248,0.08);
-      color:var(--primary);
-      cursor:pointer;
-      font-size:1rem;
-      transition:0.25s;
-    }
-
-    .carousel-btn:hover{
-      background:var(--primary);
-      color:white;
-    }
-
-    .career-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:26px;
-      margin-bottom:26px;
-    }
-
-    .career-box{
-      border-radius:22px;
-      padding:28px;
-    }
-
-    .career-box h3{
-      margin-bottom:18px;
-      color:var(--primary);
-      font-size:1.35rem;
-    }
-
-    .timeline{
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
-
-    .timeline-item{
-      padding:18px;
-      border-left:4px solid var(--primary);
-      border-radius:12px;
-      background:rgba(255,255,255,0.03);
-    }
-
-    .light .timeline-item{
-      background:rgba(15,23,42,0.04);
-    }
-
-    .timeline-item h4{
-      margin-bottom:6px;
-    }
-
-    .timeline-item span{
-      display:block;
-      margin-bottom:8px;
-      color:var(--muted);
-      font-size:0.93rem;
-    }
-
-    .timeline-item p{
-      color:var(--muted);
-      line-height:1.7;
-    }
-
-    .skills{
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-    }
-
-    .skill p{
-      font-weight:700;
-      margin-bottom:8px;
-    }
-
-    .bar{
-      height:10px;
-      background:rgba(255,255,255,0.08);
-      border-radius:999px;
-      overflow:hidden;
-    }
-
-    .light .bar{
-      background:#dbe4ee;
-    }
-
-    .bar span{
-      display:block;
-      height:100%;
-      background:linear-gradient(90deg, var(--primary), var(--primary-dark));
-      border-radius:999px;
-    }
-
-    .certificates-box{
-      border-radius:22px;
-      padding:28px;
-      margin-top:6px;
-    }
-
-    .certificates-box h3{
-      color:var(--primary);
-      margin-bottom:22px;
-      font-size:1.35rem;
-      text-align:center;
-    }
-
-    .cert-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
-    }
-
-    .cert-card{
-      border-radius:18px;
-      overflow:hidden;
-      display:flex;
-      flex-direction:column;
-      transition:0.28s;
-    }
-
-    .cert-card:hover{
-      transform:translateY(-6px);
-    }
-
-    .cert-thumb{
-      height:170px;
-      background:
-        linear-gradient(135deg, rgba(56,189,248,0.18), rgba(14,165,233,0.06)),
-        linear-gradient(180deg, #ffffff, #edf4fb);
-      color:#0f172a;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      padding:18px;
-      border-bottom:1px solid var(--border);
-    }
-
-    .cert-thumb i{
-      font-size:2.2rem;
-      color:var(--primary-dark);
-      margin-bottom:10px;
-    }
-
-    .cert-thumb strong{
-      font-size:1rem;
-      line-height:1.45;
-    }
-
-    .cert-body{
-      padding:18px;
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      height:100%;
-    }
-
-    .cert-body h4{
-      font-size:1rem;
-      line-height:1.5;
-      min-height:48px;
-    }
-
-    .cert-body p{
-      color:var(--muted);
-      line-height:1.7;
-      font-size:0.92rem;
-      flex:1;
-    }
-
-    .cert-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .btn-small{
-      padding:10px 14px;
-      border-radius:10px;
-      font-size:0.92rem;
-      font-weight:700;
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      border:none;
-      cursor:pointer;
-    }
-
-    .btn-view{
-      background:var(--primary);
-      color:white;
-    }
-
-    .btn-view:hover{
-      background:var(--primary-dark);
-    }
-
-    .btn-download{
-      background:transparent;
-      color:var(--primary);
-      border:1px solid var(--primary);
-    }
-
-    .btn-download:hover{
-      background:var(--primary);
-      color:white;
-    }
-
-    .stats-section{
-      padding-top:40px;
-    }
-
-    .counter{
-      font-size:3.4rem;
-      text-align:center;
-      color:var(--primary);
-      font-weight:800;
-    }
-
-    .counter-label{
-      text-align:center;
-      color:var(--muted);
-      margin-top:8px;
-    }
-
-    .contact-box{
-      max-width:900px;
-      margin:0 auto;
-      border-radius:24px;
-      padding:32px;
-    }
-
-    .contact-grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .form-group{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-      margin-bottom:16px;
-    }
-
-    .form-group.full{
-      grid-column:1 / -1;
-    }
-
-    .form-group label{
-      font-weight:700;
-    }
-
-    .form-group input,
-    .form-group textarea{
-      width:100%;
-      padding:14px 16px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:rgba(2,6,23,0.45);
-      color:var(--text);
-      outline:none;
-      transition:0.25s;
-    }
-
-    .light .form-group input,
-    .light .form-group textarea{
-      background:white;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus{
-      border-color:var(--primary);
-      box-shadow:0 0 0 4px rgba(56,189,248,0.13);
-    }
-
-    .form-group textarea{
-      min-height:160px;
-      resize:vertical;
-    }
-
-    .contact-links{
-      margin-top:22px;
-      text-align:center;
-      color:var(--muted);
-    }
-
-    .contact-links p{
-      margin-bottom:10px;
-    }
-
-    .contact-links a{
-      color:var(--primary);
-      text-decoration:none;
-      font-weight:700;
-    }
-
-    footer{
-      text-align:center;
-      padding:34px 20px;
-      background:#020617;
-      color:#cbd5e1;
-      margin-top:30px;
-      border-top:1px solid var(--border);
-    }
-
-    .whatsapp{
-      position:fixed;
-      bottom:25px;
-      right:25px;
-      background:#25D366;
-      width:56px;
-      height:56px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:29px;
-      color:white;
-      text-decoration:none;
-      z-index:1001;
-      box-shadow:0 12px 24px rgba(0,0,0,0.25);
-    }
-
-    .fade{
-      opacity:0;
-      transform:translateY(34px);
-      transition:0.9s;
-    }
-
-    .fade.show{
-      opacity:1;
-      transform:translateY(0);
-    }
-
-    canvas{
-      position:fixed;
-      inset:0;
-      z-index:-1;
-    }
-
-    .modal{
-      display:none;
-      position:fixed;
-      inset:0;
-      background:rgba(2,6,23,0.88);
-      z-index:2000;
-      align-items:center;
-      justify-content:center;
-      padding:24px;
-    }
-
-    .modal.active{
-      display:flex;
-    }
-
-    .modal-content{
-      width:min(1180px, 100%);
-      height:min(92vh, 920px);
-      background:var(--bg-soft);
-      border:1px solid var(--border);
-      border-radius:24px;
-      overflow:hidden;
-      box-shadow:0 24px 60px rgba(0,0,0,0.35);
-      display:grid;
-      grid-template-columns:320px 1fr;
-    }
-
-    .modal-side{
-      border-right:1px solid var(--border);
-      padding:24px;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      background:rgba(255,255,255,0.02);
-    }
-
-    .modal-preview{
-      height:260px;
-      border-radius:18px;
-      background:
-        linear-gradient(135deg, rgba(56,189,248,0.18), rgba(14,165,233,0.05)),
-        linear-gradient(180deg, #ffffff, #edf4fb);
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:#0f172a;
-      padding:18px;
-    }
-
-    .modal-preview i{
-      font-size:2.5rem;
-      color:var(--primary-dark);
-      margin-bottom:12px;
-    }
-
-    .modal-side h3{
-      color:var(--primary);
-      line-height:1.5;
-      font-size:1.15rem;
-    }
-
-    .modal-side p{
-      color:var(--muted);
-      line-height:1.8;
-      font-size:0.95rem;
-    }
-
-    .modal-main{
-      display:flex;
-      flex-direction:column;
-      min-height:0;
-    }
-
-    .modal-header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:16px 20px;
-      border-bottom:1px solid var(--border);
-      background:rgba(255,255,255,0.02);
-    }
-
-    .modal-header strong{
-      color:var(--primary);
-    }
-
-    .close-modal{
-      background:transparent;
-      border:none;
-      color:var(--text);
-      font-size:1.7rem;
-      cursor:pointer;
-    }
-
-    .modal-frame{
-      width:100%;
-      height:100%;
-      border:none;
-      background:white;
-      flex:1;
-    }
-
-    @media (max-width: 980px){
-      .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-      }
-
-      .hero p{
-        margin-left:auto;
-        margin-right:auto;
-      }
-
-      .hero-buttons{
-        justify-content:center;
-      }
-
-      .career-grid{
-        grid-template-columns:1fr;
-      }
-
-      .modal-content{
-        grid-template-columns:1fr;
-      }
-
-      .modal-side{
-        border-right:none;
-        border-bottom:1px solid var(--border);
-      }
-
-      .modal-preview{
-        height:180px;
-      }
-    }
-
-    @media (max-width: 768px){
-      nav{
-        padding:16px 18px;
-        flex-direction:column;
-        gap:12px;
-      }
-
-      nav .nav-links{
-        justify-content:center;
-      }
-
-      nav a{
-        margin:6px 9px;
-      }
-
-      section{
-        padding:86px 7%;
-      }
-
-      .hero{
-        padding:140px 7% 80px;
-      }
-
-      .contact-grid{
-        grid-template-columns:1fr;
-      }
-
-      .project-slide{
-        min-width:280px;
-        max-width:280px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <canvas id="particles"></canvas>
-
-  <nav>
-    <div class="brand">Jean Felipe</div>
-
-    <div class="nav-links">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#tech">Tecnologias</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#carreira">Carreira</a>
-      <a href="#contato">Contato</a>
-      <i class="fa-solid fa-moon toggle" onclick="toggleTheme()"></i>
-    </div>
-  </nav>
-
-  <section class="hero" id="inicio">
-    <div class="hero-content fade">
-      <span class="badge">Computer Science Student | Developer</span>
-      <h1>Transformando ideias em experiências digitais</h1>
-      <p>
-        Sou Jean Felipe, estudante de Ciência da Computação, com foco em desenvolvimento web,
-        programação, análise de dados e construção de soluções tecnológicas modernas.
-      </p>
-
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="#contato">
-          <i class="fa-regular fa-paper-plane"></i> Entrar em contato
-        </a>
-        <a class="btn btn-outline" href="#projetos">
-          <i class="fa-solid fa-code"></i> Ver projetos
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-photo-wrap fade">
-      <div class="hero-photo">
-        <img src="./assets/img/jean-hero.png" alt="Foto de Jean Felipe">
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre" class="fade">
-    <h2>Sobre Mim</h2>
-    <p class="section-subtitle">
-      Estudante de Ciência da Computação apaixonado por tecnologia, desenvolvimento de software
-      e soluções inovadoras. Tenho experiência com programação, automação, análise de dados
-      e projetos envolvendo hardware e inteligência artificial.
-    </p>
-
-    <div class="about-box glass">
-      <p>
-        Meu objetivo é criar soluções úteis, elegantes e funcionais, unindo lógica, design e performance.
-        Gosto de desenvolver interfaces modernas, organizar dados de forma estratégica e evoluir continuamente
-        minhas habilidades técnicas por meio de projetos práticos e estudos constantes.
-      </p>
-    </div>
-  </section>
-
-  <section id="tech" class="fade">
-    <h2>Tecnologias</h2>
-    <p class="section-subtitle">
-      Ferramentas e tecnologias com as quais venho desenvolvendo projetos e fortalecendo minha base técnica.
-    </p>
-
-    <div class="tech-grid">
-      <div class="tech-item glass"><i class="fa-brands fa-python"></i><p>Python</p></div>
-      <div class="tech-item glass"><i class="fa-brands fa-html5"></i><p>HTML5</p></div>
-      <div class="tech-item glass"><i class="fa-brands fa-css3-alt"></i><p>CSS3</p></div>
-      <div class="tech-item glass"><i class="fa-brands fa-js"></i><p>JavaScript</p></div>
-      <div class="tech-item glass"><i class="fa-solid fa-database"></i><p>SQL</p></div>
-      <div class="tech-item glass"><i class="fa-brands fa-git-alt"></i><p>Git</p></div>
-      <div class="tech-item glass"><i class="fa-solid fa-chart-simple"></i><p>Power BI</p></div>
-      <div class="tech-item glass"><i class="fa-solid fa-microchip"></i><p>Arduino</p></div>
-    </div>
-  </section>
-
-  <section id="projetos" class="fade">
-    <h2>Projetos</h2>
-    <p class="section-subtitle">
-      Alguns projetos práticos e acadêmicos que representam minha evolução em desenvolvimento,
-      dados, lógica computacional e soluções para problemas reais.
-    </p>
-
-    <div class="projects-carousel-wrap">
-      <div class="projects-carousel" id="projectsCarousel">
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
-          <h3>Sensor de Fumaça</h3>
-          <p>Sistema de prevenção de incêndios utilizando Arduino, sensores e lógica embarcada para detecção de risco e alerta.</p>
-        </div>
-
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-laptop-code"></i></div>
-          <h3>Portfólio Profissional</h3>
-          <p>Website desenvolvido para apresentação profissional, com foco em identidade visual, navegação intuitiva e responsividade.</p>
-        </div>
-
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
-          <h3>Análise de Dados</h3>
-          <p>Projetos voltados para organização, interpretação e visualização de dados, apoiando análises e tomada de decisão.</p>
-        </div>
-
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-window-maximize"></i></div>
-          <h3>Sistema Web de Cadastro e Consulta</h3>
-          <p>Aplicação web para cadastro, edição e consulta de informações, com foco em estruturação, usabilidade e organização dos dados.</p>
-        </div>
-
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-chart-pie"></i></div>
-          <h3>Dashboard de Análise de Dados</h3>
-          <p>Painel para leitura de métricas, visualização de indicadores e apoio estratégico por meio de gráficos e resumos analíticos.</p>
-        </div>
-
-        <div class="project-slide">
-          <div class="project-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3>Projeto de Classificação com Machine Learning</h3>
-          <p>Protótipo com fundamentos de inteligência artificial para classificação de dados e exploração de padrões em conjuntos de informação.</p>
-        </div>
-      </div>
-
-      <div class="carousel-controls">
-        <button class="carousel-btn" onclick="scrollProjects(-340)">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="carousel-btn" onclick="scrollProjects(340)">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <section id="carreira" class="fade">
-    <h2>Carreira</h2>
-    <p class="section-subtitle">
-      Minha trajetória acadêmica, formação complementar e evolução em habilidades técnicas.
-    </p>
-
-    <div class="career-grid">
-      <div class="career-box glass">
-        <h3>Formação e trajetória</h3>
-
-        <div class="timeline">
-          <div class="timeline-item">
-            <h4>Ciência da Computação</h4>
-            <span>Graduação em andamento</span>
-            <p>Formação com foco em programação, desenvolvimento de software, lógica computacional, banco de dados e soluções tecnológicas.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h4>Cultura Inglesa</h4>
-            <span>2019 — 2024</span>
-            <p>Formação em inglês com desenvolvimento de leitura, escrita, escuta e conversação, fortalecendo a comunicação acadêmica e profissional.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h4>Projetos práticos em tecnologia</h4>
-            <span>Desenvolvimento contínuo</span>
-            <p>Atuação em projetos com foco em desenvolvimento web, automação, hardware, análise de dados e construção de portfólio profissional.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="career-box glass">
-        <h3>Habilidades</h3>
-
-        <div class="skills">
-          <div class="skill">
-            <p>Python</p>
-            <div class="bar"><span style="width:85%"></span></div>
-          </div>
-
-          <div class="skill">
-            <p>HTML & CSS</p>
-            <div class="bar"><span style="width:90%"></span></div>
-          </div>
-
-          <div class="skill">
-            <p>JavaScript</p>
-            <div class="bar"><span style="width:75%"></span></div>
-          </div>
-
-          <div class="skill">
-            <p>SQL</p>
-            <div class="bar"><span style="width:80%"></span></div>
-          </div>
-
-          <div class="skill">
-            <p>Git & GitHub</p>
-            <div class="bar"><span style="width:78%"></span></div>
-          </div>
-
-          <div class="skill">
-            <p>Power BI</p>
-            <div class="bar"><span style="width:70%"></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="certificates-box glass">
-      <h3>Certificados</h3>
-
-      <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-thumb">
-            <i class="fa-solid fa-file-pdf"></i>
-            <strong>Introdução ao Git e GitHub</strong>
-          </div>
-          <div class="cert-body">
-            <h4>Introdução ao Git e GitHub</h4>
-            <p>Fundamentos de versionamento, repositórios, commits, branches e fluxo de trabalho com GitHub.</p>
-            <div class="cert-actions">
-              <button class="btn-small btn-view" onclick="openCertificate('./assets/certificados/14523502_certificado_Fgv.pdf', 'Introdução ao Git e GitHub', 'Fundamentos de versionamento, repositórios, commits, branches e fluxo de trabalho com GitHub.')">
-                <i class="fa-regular fa-eye"></i> Visualizar
-              </button>
-              <a class="btn-small btn-download" href="./assets/certificados/14523502_certificado_Fgv.pdf" download>
-                <i class="fa-solid fa-download"></i> Baixar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">
-            <i class="fa-solid fa-file-pdf"></i>
-            <strong>Tópicos em Machine Learning</strong>
-          </div>
-          <div class="cert-body">
-            <h4>Tópicos em Machine Learning</h4>
-            <p>Conceitos introdutórios de aprendizado de máquina e aplicações em classificação e análise de dados.</p>
-            <div class="cert-actions">
-              <button class="btn-small btn-view" onclick="openCertificate('./assets/certificados/14523504_certificado_Fgv.pdf', 'Tópicos em Machine Learning', 'Conceitos introdutórios de aprendizado de máquina e aplicações em classificação e análise de dados.')">
-                <i class="fa-regular fa-eye"></i> Visualizar
-              </button>
-              <a class="btn-small btn-download" href="./assets/certificados/14523504_certificado_Fgv.pdf" download>
-                <i class="fa-solid fa-download"></i> Baixar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">
-            <i class="fa-solid fa-file-pdf"></i>
-            <strong>Transformação Digital da Comunicação</strong>
-          </div>
-          <div class="cert-body">
-            <h4>Transformação Digital da Comunicação</h4>
-            <p>Estudo sobre mudanças tecnológicas e impactos da transformação digital nos processos de comunicação.</p>
-            <div class="cert-actions">
-              <button class="btn-small btn-view" onclick="openCertificate('./assets/certificados/14609790_certificado_Fgv.pdf', 'Transformação Digital da Comunicação', 'Estudo sobre mudanças tecnológicas e impactos da transformação digital nos processos de comunicação.')">
-                <i class="fa-regular fa-eye"></i> Visualizar
-              </button>
-              <a class="btn-small btn-download" href="./assets/certificados/14609790_certificado_Fgv.pdf" download>
-                <i class="fa-solid fa-download"></i> Baixar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">
-            <i class="fa-solid fa-file-pdf"></i>
-            <strong>Desenvolvimento de Sistemas Web: CSS e HTML</strong>
-          </div>
-          <div class="cert-body">
-            <h4>Desenvolvimento de Sistemas Web: CSS e HTML</h4>
-            <p>Curso com foco em estruturação e estilização de páginas web usando HTML e CSS.</p>
-            <div class="cert-actions">
-              <button class="btn-small btn-view" onclick="openCertificate('./assets/certificados/14523496_certificado_Fgv.pdf', 'Desenvolvimento de Sistemas Web: CSS e HTML', 'Curso com foco em estruturação e estilização de páginas web usando HTML e CSS.')">
-                <i class="fa-regular fa-eye"></i> Visualizar
-              </button>
-              <a class="btn-small btn-download" href="./assets/certificados/14523496_certificado_Fgv.pdf" download>
-                <i class="fa-solid fa-download"></i> Baixar
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-thumb">
-            <i class="fa-solid fa-file-pdf"></i>
-            <strong>Introdução à Ciência de Dados</strong>
-          </div>
-          <div class="cert-body">
-            <h4>Introdução à Ciência de Dados</h4>
-            <p>Fundamentos de organização, análise e interpretação de dados em contextos tecnológicos e estratégicos.</p>
-            <div class="cert-actions">
-              <button class="btn-small btn-view" onclick="openCertificate('./assets/certificados/14479392_certificado_Fgv.pdf', 'Introdução à Ciência de Dados', 'Fundamentos de organização, análise e interpretação de dados em contextos tecnológicos e estratégicos.')">
-                <i class="fa-regular fa-eye"></i> Visualizar
-              </button>
-              <a class="btn-small btn-download" href="./assets/certificados/14479392_certificado_Fgv.pdf" download>
-                <i class="fa-solid fa-download"></i> Baixar
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="fade stats-section">
-    <h2>Projetos Desenvolvidos</h2>
-    <div class="counter" id="counter">0</div>
-    <p class="counter-label">Projetos em desenvolvimento e evolução contínua</p>
-  </section>
-
-  <section id="contato" class="fade">
-    <h2>Contato</h2>
-    <p class="section-subtitle">
-      Preencha o formulário para me enviar uma mensagem diretamente por e-mail.
-    </p>
-
-    <div class="contact-box glass">
-      <form action="https://formspree.io/f/maqdraek" method="POST">
-        <div class="contact-grid">
-          <div class="form-group">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@email.com" required>
-          </div>
-
-          <div class="form-group full">
-            <label for="assunto">Assunto</label>
-            <input type="text" id="assunto" name="assunto" placeholder="Assunto da mensagem" required>
-          </div>
-
-          <div class="form-group full">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="message" placeholder="Digite sua mensagem aqui..." required></textarea>
-          </div>
-        </div>
-
-        <div style="text-align:center; margin-top:8px;">
-          <button type="submit" class="btn btn-primary">
-            <i class="fa-regular fa-paper-plane"></i> Enviar mensagem
-          </button>
-        </div>
-      </form>
-
-      <div class="contact-links">
-        <p>Email: jeanfelipe711@gmail.com</p>
-        <p>
-          <a href="https://www.linkedin.com/in/jean-felipe-7501b2212/" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/Jeanzinr17" target="_blank">GitHub</a> |
-          <a href="https://instagram.com/jean_deligt" target="_blank">Instagram</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Jean Felipe</p>
-  </footer>
-
-  <a class="whatsapp" href="https://wa.me/5521999999999" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-  </a>
-
-  <div class="modal" id="certificateModal">
-    <div class="modal-content">
-      <div class="modal-side">
-        <div class="modal-preview">
-          <i class="fa-solid fa-file-pdf"></i>
-          <strong id="modalPreviewTitle">Certificado</strong>
-        </div>
-
-        <h3 id="certificateTitle">Certificado</h3>
-        <p id="certificateDescription">Descrição do certificado.</p>
-
-        <a id="certificateDownload" class="btn btn-primary" href="#" download>
-          <i class="fa-solid fa-download"></i> Baixar certificado
-        </a>
-      </div>
-
-      <div class="modal-main">
-        <div class="modal-header">
-          <strong>Visualização do certificado</strong>
-          <button class="close-modal" onclick="closeCertificate()">&times;</button>
-        </div>
-
-        <iframe class="modal-frame" id="certificateFrame" src=""></iframe>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function toggleTheme(){
-      document.body.classList.toggle("light");
-    }
-
-    const faders = document.querySelectorAll(".fade");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add("show");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    faders.forEach(el => observer.observe(el));
-
-    let counter = document.getElementById("counter");
-    let count = 0;
-    let started = false;
-
-    const counterObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting && !started){
-          started = true;
-          let interval = setInterval(() => {
-            count++;
-            counter.innerText = count;
-            if(count === 12) clearInterval(interval);
-          }, 110);
-        }
-      });
-    }, { threshold: 0.4 });
-
-    counterObserver.observe(counter);
-
-    const canvas = document.getElementById("particles");
-    const ctx = canvas.getContext("2d");
-
-    function resizeCanvas(){
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
-    let particles = [];
-
-    function createParticles(){
-      particles = [];
-      for(let i = 0; i < 85; i++){
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          r: Math.random() * 2.2,
-          s: Math.random() * 0.45 + 0.08
-        });
-      }
-    }
-
-    createParticles();
-
-    function draw(){
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach(p => {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = "#38bdf8";
-        ctx.globalAlpha = 0.75;
-        ctx.fill();
-        ctx.globalAlpha = 1;
-
-        p.y += p.s;
-        if(p.y > canvas.height){
-          p.y = -10;
-          p.x = Math.random() * canvas.width;
-        }
-      });
-
-      requestAnimationFrame(draw);
-    }
-
-    draw();
-
-    function scrollProjects(distance){
-      document.getElementById("projectsCarousel").scrollBy({
-        left: distance,
-        behavior: "smooth"
-      });
-    }
-
-    const certificateModal = document.getElementById("certificateModal");
-    const certificateFrame = document.getElementById("certificateFrame");
-    const certificateTitle = document.getElementById("certificateTitle");
-    const modalPreviewTitle = document.getElementById("modalPreviewTitle");
-    const certificateDescription = document.getElementById("certificateDescription");
-    const certificateDownload = document.getElementById("certificateDownload");
-
-    function openCertificate(pdfPath, title, description){
-      certificateFrame.src = pdfPath;
-      certificateTitle.textContent = title;
-      modalPreviewTitle.textContent = title;
-      certificateDescription.textContent = description;
-      certificateDownload.href = pdfPath;
-      certificateModal.classList.add("active");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeCertificate(){
-      certificateModal.classList.remove("active");
-      certificateFrame.src = "";
-      document.body.style.overflow = "auto";
-    }
-
-    certificateModal.addEventListener("click", function(e){
-      if(e.target === certificateModal){
-        closeCertificate();
-      }
-    });
-
-    document.addEventListener("keydown", function(e){
-      if(e.key === "Escape"){
-        closeCertificate();
-      }
-    });
-  </script>
 </body>
 </html>
